@@ -410,8 +410,8 @@ For reviewing multiple PRs or large changes:
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Review PR #1 or Component A | bmad/outputs/review-1.md |
-| Agent 2 | Review PR #2 or Component B | bmad/outputs/review-2.md |
+| Agent 1 | Review PR #1 or Component A | accbmad/outputs/review-1.md |
+| Agent 2 | Review PR #2 or Component B | accbmad/outputs/review-2.md |
 
 **Coordination:**
 1. Identify independent review scopes

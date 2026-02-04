@@ -242,13 +242,13 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Market research - size, trends, growth opportunities | bmad/outputs/market-research.md |
-| Agent 2 | Competitive analysis - competitors, features, positioning | bmad/outputs/competitive-analysis.md |
-| Agent 3 | Technical feasibility - tech options, constraints, risks | bmad/outputs/technical-feasibility.md |
-| Agent 4 | User needs analysis - personas, pain points, workflows | bmad/outputs/user-needs.md |
+| Agent 1 | Market research - size, trends, growth opportunities | accbmad/outputs/market-research.md |
+| Agent 2 | Competitive analysis - competitors, features, positioning | accbmad/outputs/competitive-analysis.md |
+| Agent 3 | Technical feasibility - tech options, constraints, risks | accbmad/outputs/technical-feasibility.md |
+| Agent 4 | User needs analysis - personas, pain points, workflows | accbmad/outputs/user-needs.md |
 
 **Coordination:**
-1. Write shared problem context to bmad/context/discovery-brief.md
+1. Write shared problem context to accbmad/context/discovery-brief.md
 2. Launch all 4 research agents in parallel with shared context
 3. Each agent conducts specialized research and writes findings
 4. Main context synthesizes all research into comprehensive product brief
@@ -259,22 +259,22 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Problem definition and target users section | bmad/outputs/section-problem.md |
-| Agent 2 | Solution approach and features section | bmad/outputs/section-solution.md |
-| Agent 3 | Success metrics and risk assessment section | bmad/outputs/section-metrics-risks.md |
+| Agent 1 | Problem definition and target users section | accbmad/outputs/section-problem.md |
+| Agent 2 | Solution approach and features section | accbmad/outputs/section-solution.md |
+| Agent 3 | Success metrics and risk assessment section | accbmad/outputs/section-metrics-risks.md |
 
 **Coordination:**
 1. Complete stakeholder interviews (sequential, interactive)
-2. Write consolidated requirements to bmad/context/requirements.md
+2. Write consolidated requirements to accbmad/context/requirements.md
 3. Launch parallel agents to generate brief sections
 4. Main context assembles sections into final product brief document
 
 ### Example Subagent Prompt
 ```
 Task: Conduct competitive analysis for mobile payment product
-Context: Read bmad/context/discovery-brief.md for problem statement and target market
+Context: Read accbmad/context/discovery-brief.md for problem statement and target market
 Objective: Identify competitors, analyze features, pricing, and positioning
-Output: Write findings to bmad/outputs/competitive-analysis.md
+Output: Write findings to accbmad/outputs/competitive-analysis.md
 
 Deliverables:
 1. List of 5-8 direct competitors with profiles

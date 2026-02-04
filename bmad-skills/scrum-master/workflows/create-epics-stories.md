@@ -471,19 +471,19 @@ For large PRDs (15+ requirements), use parallel agents:
 
 | Agent | Role | Input | Output |
 |-------|------|-------|--------|
-| Main | Epic structure design | PRD | `bmad/context/epics-structure.md` |
-| Agent 1 | Story writer for Epic 1 | Epic 1 FRs | `bmad/outputs/epic-1-stories.md` |
-| Agent 2 | Story writer for Epic 2 | Epic 2 FRs | `bmad/outputs/epic-2-stories.md` |
-| Agent N | Story writer for Epic N | Epic N FRs | `bmad/outputs/epic-n-stories.md` |
+| Main | Epic structure design | PRD | `accbmad/context/epics-structure.md` |
+| Agent 1 | Story writer for Epic 1 | Epic 1 FRs | `accbmad/outputs/epic-1-stories.md` |
+| Agent 2 | Story writer for Epic 2 | Epic 2 FRs | `accbmad/outputs/epic-2-stories.md` |
+| Agent N | Story writer for Epic N | Epic N FRs | `accbmad/outputs/epic-n-stories.md` |
 | Validator | Coverage check | All outputs | Validation report |
 
 ### Coordination Flow
 
 1. **Main context:** Design epic structure, assign FRs to epics
-2. **Write shared context:** Save to `bmad/context/epics-structure.md`
+2. **Write shared context:** Save to `accbmad/context/epics-structure.md`
 3. **Launch parallel agents:** One per epic (up to 6 concurrent)
 4. **Each agent:** Creates 3-6 stories with acceptance criteria and estimates
-5. **Collect outputs:** Read all `bmad/outputs/epic-*.md` files
+5. **Collect outputs:** Read all `accbmad/outputs/epic-*.md` files
 6. **Synthesize:** Combine into final `docs/epics.md`
 7. **Validate:** Check 100% FR coverage, no orphans
 
@@ -491,7 +491,7 @@ For large PRDs (15+ requirements), use parallel agents:
 
 ```
 Task: Create stories for Epic 2 (Task Management)
-Context: Read bmad/context/epics-structure.md for epic definition and assigned FRs
+Context: Read accbmad/context/epics-structure.md for epic definition and assigned FRs
 Objective: Create 4-6 user stories with Given/When/Then acceptance criteria
 
 Requirements to cover:
@@ -500,7 +500,7 @@ Requirements to cover:
 - FR-006: Delete task
 - FR-007: Mark task complete
 
-Output: Write to bmad/outputs/epic-2-stories.md
+Output: Write to accbmad/outputs/epic-2-stories.md
 
 Format each story with:
 - Title and story points estimate (Fibonacci)

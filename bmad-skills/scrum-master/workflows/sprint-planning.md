@@ -360,9 +360,9 @@ For large projects (Level 3+), use parallel planning:
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Analyze dependencies and create graph | bmad/outputs/dependencies.md |
-| Agent 2 | Calculate velocity and capacity | bmad/outputs/capacity.md |
-| Agent 3 | Generate sprint goals from epics | bmad/outputs/sprint-goals.md |
+| Agent 1 | Analyze dependencies and create graph | accbmad/outputs/dependencies.md |
+| Agent 2 | Calculate velocity and capacity | accbmad/outputs/capacity.md |
+| Agent 3 | Generate sprint goals from epics | accbmad/outputs/sprint-goals.md |
 
 **Coordination:**
 1. Load all stories from epics document

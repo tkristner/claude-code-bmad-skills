@@ -336,10 +336,10 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Check project config and validate structure | bmad/outputs/config-status.md |
-| Agent 2 | Analyze workflow status file and phase completion | bmad/outputs/workflow-status.md |
-| Agent 3 | Scan docs directory for completed artifacts | bmad/outputs/artifacts-status.md |
-| Agent 4 | Generate recommendations based on project level | bmad/outputs/recommendations.md |
+| Agent 1 | Check project config and validate structure | accbmad/outputs/config-status.md |
+| Agent 2 | Analyze workflow status file and phase completion | accbmad/outputs/workflow-status.md |
+| Agent 3 | Scan docs directory for completed artifacts | accbmad/outputs/artifacts-status.md |
+| Agent 4 | Generate recommendations based on project level | accbmad/outputs/recommendations.md |
 
 **Coordination:**
 1. Launch all agents with shared project context
@@ -353,7 +353,7 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Create directory structure and validate paths | bmad/outputs/directory-setup.md |
+| Agent 1 | Create directory structure and validate paths | accbmad/outputs/directory-setup.md |
 | Agent 2 | Generate project config from template | accbmad/config.yaml |
 | Agent 3 | Generate workflow status file with level-based requirements | accbmad/status.yaml |
 
@@ -367,7 +367,7 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 Task: Analyze workflow status and determine current phase
 Context: Read accbmad/config.yaml and accbmad/status.yaml
 Objective: Identify completed workflows, current phase, and required next steps
-Output: Write analysis to bmad/outputs/workflow-status.md
+Output: Write analysis to accbmad/outputs/workflow-status.md
 
 Deliverables:
 1. List of completed workflows with file paths

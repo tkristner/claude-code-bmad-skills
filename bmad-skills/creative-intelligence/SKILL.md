@@ -163,7 +163,7 @@ Agent 3: Technical research (technologies, patterns)
 Agent 4: User research (needs, behaviors, pain points)
 ```
 
-**Coordination:** Write shared context to `bmad/context/research-scope.md`, each agent writes to separate output files, main context synthesizes.
+**Coordination:** Write shared context to `accbmad/context/research-scope.md`, each agent writes to separate output files, main context synthesizes.
 
 ### Pattern 2: Iterative Deep Dive
 Use findings from initial research to guide deeper investigation:
@@ -338,7 +338,7 @@ Use `templates/research-report.template.md` which includes:
 - Market research report with size, trends, opportunities
 - Competitive matrix with feature comparisons
 - User research synthesis with pain points and needs
-**Handoff format:** `bmad/outputs/research-for-brief-{date}.md`
+**Handoff format:** `accbmad/outputs/research-for-brief-{date}.md`
 
 ### Pattern: PRD Enhancement
 **When:** Product Manager drafts PRD
@@ -346,7 +346,7 @@ Use `templates/research-report.template.md` which includes:
 - Feature brainstorm using SCAMPER (10-20 ideas)
 - Competitive feature gap analysis
 - Priority recommendations based on research
-**Handoff format:** Inline in PRD or separate `bmad/outputs/prd-research-{date}.md`
+**Handoff format:** Inline in PRD or separate `accbmad/outputs/prd-research-{date}.md`
 
 ### Pattern: Architecture Alternatives
 **When:** System Architect explores options
@@ -354,7 +354,7 @@ Use `templates/research-report.template.md` which includes:
 - Technology research (3-5 alternatives with trade-offs)
 - Pattern research (when to use each pattern)
 - Risk identification using Reverse Brainstorming
-**Handoff format:** `bmad/outputs/architecture-research-{date}.md`
+**Handoff format:** `accbmad/outputs/architecture-research-{date}.md`
 
 ### Pattern: Problem-Solving Support
 **When:** Developer encounters complex problem
@@ -362,7 +362,7 @@ Use `templates/research-report.template.md` which includes:
 - 5 Whys root cause analysis
 - Solution brainstorm with SCAMPER
 - Best practices research
-**Handoff format:** Direct conversation or `bmad/outputs/problem-{issue}-{date}.md`
+**Handoff format:** Direct conversation or `accbmad/outputs/problem-{issue}-{date}.md`
 
 ### Collaboration Checklist
 
@@ -484,15 +484,15 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Apply SCAMPER technique to generate feature variations | bmad/outputs/brainstorm-scamper.md |
-| Agent 2 | Create Mind Map to organize ideas hierarchically | bmad/outputs/brainstorm-mindmap.md |
-| Agent 3 | Use Reverse Brainstorming to identify risks | bmad/outputs/brainstorm-risks.md |
-| Agent 4 | Apply Six Thinking Hats for multi-perspective analysis | bmad/outputs/brainstorm-hats.md |
-| Agent 5 | Use Starbursting to explore with questions | bmad/outputs/brainstorm-questions.md |
-| Agent 6 | Conduct SWOT Analysis for strategic positioning | bmad/outputs/brainstorm-swot.md |
+| Agent 1 | Apply SCAMPER technique to generate feature variations | accbmad/outputs/brainstorm-scamper.md |
+| Agent 2 | Create Mind Map to organize ideas hierarchically | accbmad/outputs/brainstorm-mindmap.md |
+| Agent 3 | Use Reverse Brainstorming to identify risks | accbmad/outputs/brainstorm-risks.md |
+| Agent 4 | Apply Six Thinking Hats for multi-perspective analysis | accbmad/outputs/brainstorm-hats.md |
+| Agent 5 | Use Starbursting to explore with questions | accbmad/outputs/brainstorm-questions.md |
+| Agent 6 | Conduct SWOT Analysis for strategic positioning | accbmad/outputs/brainstorm-swot.md |
 
 **Coordination:**
-1. Define brainstorming objective and write to bmad/context/brainstorm-objective.md
+1. Define brainstorming objective and write to accbmad/context/brainstorm-objective.md
 2. Select 3-6 complementary techniques based on objective
 3. Launch parallel agents, each applying one technique
 4. Each agent generates 10-30 ideas/insights using their technique
@@ -507,13 +507,13 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Market research - size, trends, opportunities | bmad/outputs/research-market.md |
-| Agent 2 | Competitive analysis - competitors, features, gaps | bmad/outputs/research-competitive.md |
-| Agent 3 | Technical research - technologies, patterns, approaches | bmad/outputs/research-technical.md |
-| Agent 4 | User research - needs, pain points, workflows | bmad/outputs/research-user.md |
+| Agent 1 | Market research - size, trends, opportunities | accbmad/outputs/research-market.md |
+| Agent 2 | Competitive analysis - competitors, features, gaps | accbmad/outputs/research-competitive.md |
+| Agent 3 | Technical research - technologies, patterns, approaches | accbmad/outputs/research-technical.md |
+| Agent 4 | User research - needs, pain points, workflows | accbmad/outputs/research-user.md |
 
 **Coordination:**
-1. Define research scope and questions in bmad/context/research-scope.md
+1. Define research scope and questions in accbmad/context/research-scope.md
 2. Launch all 4 research agents in parallel
 3. Each agent uses WebSearch/WebFetch for their research domain
 4. Agents document findings with sources and quantitative data
@@ -528,12 +528,12 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Apply 5 Whys to uncover root causes | bmad/outputs/exploration-5whys.md |
-| Agent 2 | Use Starbursting to generate comprehensive questions | bmad/outputs/exploration-questions.md |
-| Agent 3 | Conduct stakeholder perspective analysis | bmad/outputs/exploration-perspectives.md |
+| Agent 1 | Apply 5 Whys to uncover root causes | accbmad/outputs/exploration-5whys.md |
+| Agent 2 | Use Starbursting to generate comprehensive questions | accbmad/outputs/exploration-questions.md |
+| Agent 3 | Conduct stakeholder perspective analysis | accbmad/outputs/exploration-perspectives.md |
 
 **Coordination:**
-1. Write problem statement to bmad/context/problem-statement.md
+1. Write problem statement to accbmad/context/problem-statement.md
 2. Launch parallel agents for deep problem exploration
 3. Each agent explores problem from different analytical angle
 4. Main context identifies true root causes and key questions
@@ -547,13 +547,13 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Generate solution variations using SCAMPER | bmad/outputs/solutions-scamper.md |
-| Agent 2 | Research existing solutions and best practices | bmad/outputs/solutions-research.md |
-| Agent 3 | Identify constraints and feasibility considerations | bmad/outputs/solutions-constraints.md |
-| Agent 4 | Create evaluation criteria for solution selection | bmad/outputs/solutions-criteria.md |
+| Agent 1 | Generate solution variations using SCAMPER | accbmad/outputs/solutions-scamper.md |
+| Agent 2 | Research existing solutions and best practices | accbmad/outputs/solutions-research.md |
+| Agent 3 | Identify constraints and feasibility considerations | accbmad/outputs/solutions-constraints.md |
+| Agent 4 | Create evaluation criteria for solution selection | accbmad/outputs/solutions-criteria.md |
 
 **Coordination:**
-1. Load problem definition from bmad/context/problem-statement.md
+1. Load problem definition from accbmad/context/problem-statement.md
 2. Launch parallel agents for solution exploration
 3. Collect diverse solution approaches and variations
 4. Main context evaluates solutions against criteria
@@ -564,9 +564,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 ### Example Subagent Prompt
 ```
 Task: Apply SCAMPER technique to mobile payment feature ideas
-Context: Read bmad/context/brainstorm-objective.md for product context
+Context: Read accbmad/context/brainstorm-objective.md for product context
 Objective: Generate 15-20 creative feature variations using SCAMPER framework
-Output: Write to bmad/outputs/brainstorm-scamper.md
+Output: Write to accbmad/outputs/brainstorm-scamper.md
 
 SCAMPER Framework:
 - Substitute: What can be replaced or changed?

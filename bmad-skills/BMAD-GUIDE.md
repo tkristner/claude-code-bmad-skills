@@ -108,8 +108,8 @@ All BMAD skills leverage **parallel subagents** to maximize the 200K token conte
 
 1. **Decompose** the task into independent subtasks
 2. **Launch** parallel agents using the Task tool with `run_in_background: true`
-3. **Coordinate** by writing shared context to `bmad/context/`
-4. **Synthesize** results from `bmad/outputs/`
+3. **Coordinate** by writing shared context to `accbmad/context/`
+4. **Synthesize** results from `accbmad/outputs/`
 
 See `BMAD-SUBAGENT-PATTERNS.md` for detailed patterns.
 

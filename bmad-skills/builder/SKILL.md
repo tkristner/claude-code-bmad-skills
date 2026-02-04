@@ -257,7 +257,7 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 **Coordination:**
 1. Gather requirements for new skill from user (sequential)
-2. Write skill specification to bmad/context/skill-spec.md
+2. Write skill specification to accbmad/context/skill-spec.md
 3. Run scaffold-skill.sh to create directory structure
 4. Launch parallel agents to create skill components
 5. Each agent follows BMAD patterns and conventions
@@ -311,10 +311,10 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Validate YAML frontmatter and skill structure | bmad/outputs/validation-structure.md |
-| Agent 2 | Validate token count and optimization | bmad/outputs/validation-tokens.md |
-| Agent 3 | Validate script functionality and permissions | bmad/outputs/validation-scripts.md |
-| Agent 4 | Validate templates and resources completeness | bmad/outputs/validation-content.md |
+| Agent 1 | Validate YAML frontmatter and skill structure | accbmad/outputs/validation-structure.md |
+| Agent 2 | Validate token count and optimization | accbmad/outputs/validation-tokens.md |
+| Agent 3 | Validate script functionality and permissions | accbmad/outputs/validation-scripts.md |
+| Agent 4 | Validate templates and resources completeness | accbmad/outputs/validation-content.md |
 
 **Coordination:**
 1. Load created skill files
@@ -328,7 +328,7 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 ### Example Subagent Prompt
 ```
 Task: Create SKILL.md for QA Engineer skill
-Context: Read bmad/context/skill-spec.md for requirements
+Context: Read accbmad/context/skill-spec.md for requirements
 Objective: Create complete SKILL.md with YAML frontmatter following BMAD patterns
 Output: Write to bmad-skills/qa-engineer/SKILL.md
 

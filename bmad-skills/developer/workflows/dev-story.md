@@ -530,7 +530,7 @@ For complex stories, use parallel agents to maximize efficiency.
 
 **Coordination:**
 1. Main context loads story and creates implementation plan
-2. Write shared context to `bmad/context/story-context.md`
+2. Write shared context to `accbmad/context/story-context.md`
 3. Launch backend agent first (others depend on it)
 4. Launch logic and frontend agents in parallel after backend
 5. Launch test agent after all implementation complete

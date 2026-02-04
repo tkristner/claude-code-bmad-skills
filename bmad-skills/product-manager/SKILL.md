@@ -371,14 +371,14 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Functional Requirements section with acceptance criteria | bmad/outputs/section-functional-reqs.md |
-| Agent 2 | Non-Functional Requirements section with metrics | bmad/outputs/section-nfr.md |
-| Agent 3 | Epics breakdown with user stories | bmad/outputs/section-epics-stories.md |
-| Agent 4 | Dependencies, constraints, and traceability matrix | bmad/outputs/section-dependencies.md |
+| Agent 1 | Functional Requirements section with acceptance criteria | accbmad/outputs/section-functional-reqs.md |
+| Agent 2 | Non-Functional Requirements section with metrics | accbmad/outputs/section-nfr.md |
+| Agent 3 | Epics breakdown with user stories | accbmad/outputs/section-epics-stories.md |
+| Agent 4 | Dependencies, constraints, and traceability matrix | accbmad/outputs/section-dependencies.md |
 
 **Coordination:**
 1. Load product brief and conduct requirements gathering (sequential)
-2. Write consolidated context to bmad/context/prd-requirements.md
+2. Write consolidated context to accbmad/context/prd-requirements.md
 3. Launch all 4 agents in parallel with shared requirements context
 4. Each agent generates their PRD section with proper formatting
 5. Main context assembles sections into complete PRD document
@@ -390,13 +390,13 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Calculate RICE score for Epic 1 | bmad/outputs/epic-1-rice.md |
-| Agent 2 | Calculate RICE score for Epic 2 | bmad/outputs/epic-2-rice.md |
-| Agent N | Calculate RICE score for Epic N | bmad/outputs/epic-n-rice.md |
+| Agent 1 | Calculate RICE score for Epic 1 | accbmad/outputs/epic-1-rice.md |
+| Agent 2 | Calculate RICE score for Epic 2 | accbmad/outputs/epic-2-rice.md |
+| Agent N | Calculate RICE score for Epic N | accbmad/outputs/epic-n-rice.md |
 
 **Coordination:**
 1. Extract all epics from requirements
-2. Write scoring criteria to bmad/context/rice-criteria.md
+2. Write scoring criteria to accbmad/context/rice-criteria.md
 3. Launch parallel agents, one per epic for RICE scoring
 4. Main context collects scores and creates prioritized backlog
 5. Update PRD with prioritization rationale
@@ -407,22 +407,22 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Core requirements and acceptance criteria | bmad/outputs/section-requirements.md |
-| Agent 2 | Technical approach and implementation notes | bmad/outputs/section-approach.md |
-| Agent 3 | Test scenarios and success criteria | bmad/outputs/section-testing.md |
+| Agent 1 | Core requirements and acceptance criteria | accbmad/outputs/section-requirements.md |
+| Agent 2 | Technical approach and implementation notes | accbmad/outputs/section-approach.md |
+| Agent 3 | Test scenarios and success criteria | accbmad/outputs/section-testing.md |
 
 **Coordination:**
 1. Define scope and gather requirements (sequential)
-2. Write problem statement to bmad/context/tech-spec-scope.md
+2. Write problem statement to accbmad/context/tech-spec-scope.md
 3. Launch parallel agents for section generation
 4. Main context assembles lightweight tech spec document
 
 ### Example Subagent Prompt
 ```
 Task: Generate Functional Requirements section for e-commerce PRD
-Context: Read bmad/context/prd-requirements.md for consolidated requirements
+Context: Read accbmad/context/prd-requirements.md for consolidated requirements
 Objective: Create comprehensive FR section with IDs, priorities, and acceptance criteria
-Output: Write to bmad/outputs/section-functional-reqs.md
+Output: Write to accbmad/outputs/section-functional-reqs.md
 
 Deliverables:
 1. 12-20 functional requirements with unique IDs (FR-001, FR-002, etc.)

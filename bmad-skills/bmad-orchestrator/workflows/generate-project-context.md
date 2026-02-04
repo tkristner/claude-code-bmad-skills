@@ -661,10 +661,10 @@ For large codebases, use parallel agents to analyze different aspects.
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Analyze tech stack and dependencies | bmad/outputs/tech-stack.md |
-| Agent 2 | Analyze code conventions and patterns | bmad/outputs/conventions.md |
-| Agent 3 | Analyze testing and quality tools | bmad/outputs/testing-quality.md |
-| Agent 4 | Extract critical patterns from code samples | bmad/outputs/critical-patterns.md |
+| Agent 1 | Analyze tech stack and dependencies | accbmad/outputs/tech-stack.md |
+| Agent 2 | Analyze code conventions and patterns | accbmad/outputs/conventions.md |
+| Agent 3 | Analyze testing and quality tools | accbmad/outputs/testing-quality.md |
+| Agent 4 | Extract critical patterns from code samples | accbmad/outputs/critical-patterns.md |
 
 **Coordination:**
 1. Main context identifies project type and launches agents
@@ -686,7 +686,7 @@ Steps:
 4. Check indentation and formatting
 5. Document import style and organization
 
-Output: Write findings to bmad/outputs/conventions.md
+Output: Write findings to accbmad/outputs/conventions.md
 
 Format findings as:
 - File naming: [pattern] (examples: ...)

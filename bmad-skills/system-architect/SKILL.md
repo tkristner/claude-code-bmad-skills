@@ -251,8 +251,8 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Extract and analyze all Functional Requirements | bmad/outputs/fr-analysis.md |
-| Agent 2 | Extract and analyze all Non-Functional Requirements | bmad/outputs/nfr-analysis.md |
+| Agent 1 | Extract and analyze all Functional Requirements | accbmad/outputs/fr-analysis.md |
+| Agent 2 | Extract and analyze all Non-Functional Requirements | accbmad/outputs/nfr-analysis.md |
 
 **Coordination:**
 1. Load PRD or tech-spec from docs directory
@@ -266,15 +266,15 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Design Authentication/Authorization component | bmad/outputs/component-auth.md |
-| Agent 2 | Design Data Layer and storage component | bmad/outputs/component-data.md |
-| Agent 3 | Design API Layer component | bmad/outputs/component-api.md |
-| Agent 4 | Design Frontend/UI component | bmad/outputs/component-ui.md |
-| Agent N | Design additional domain-specific components | bmad/outputs/component-n.md |
+| Agent 1 | Design Authentication/Authorization component | accbmad/outputs/component-auth.md |
+| Agent 2 | Design Data Layer and storage component | accbmad/outputs/component-data.md |
+| Agent 3 | Design API Layer component | accbmad/outputs/component-api.md |
+| Agent 4 | Design Frontend/UI component | accbmad/outputs/component-ui.md |
+| Agent N | Design additional domain-specific components | accbmad/outputs/component-n.md |
 
 **Coordination:**
 1. Identify major system components from requirements (4-8 typical)
-2. Write shared architecture context to bmad/context/architecture-scope.md
+2. Write shared architecture context to accbmad/context/architecture-scope.md
 3. Launch parallel agents, each designing one component
 4. Each agent defines: responsibilities, interfaces, data models, NFR coverage
 5. Main context creates integration architecture from component outputs
@@ -286,16 +286,16 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Map Performance NFRs to architectural decisions | bmad/outputs/nfr-performance.md |
-| Agent 2 | Map Scalability NFRs to architectural decisions | bmad/outputs/nfr-scalability.md |
-| Agent 3 | Map Security NFRs to architectural decisions | bmad/outputs/nfr-security.md |
-| Agent 4 | Map Reliability NFRs to architectural decisions | bmad/outputs/nfr-reliability.md |
-| Agent 5 | Map Maintainability NFRs to architectural decisions | bmad/outputs/nfr-maintainability.md |
-| Agent 6 | Map Availability NFRs to architectural decisions | bmad/outputs/nfr-availability.md |
+| Agent 1 | Map Performance NFRs to architectural decisions | accbmad/outputs/nfr-performance.md |
+| Agent 2 | Map Scalability NFRs to architectural decisions | accbmad/outputs/nfr-scalability.md |
+| Agent 3 | Map Security NFRs to architectural decisions | accbmad/outputs/nfr-security.md |
+| Agent 4 | Map Reliability NFRs to architectural decisions | accbmad/outputs/nfr-reliability.md |
+| Agent 5 | Map Maintainability NFRs to architectural decisions | accbmad/outputs/nfr-maintainability.md |
+| Agent 6 | Map Availability NFRs to architectural decisions | accbmad/outputs/nfr-availability.md |
 
 **Coordination:**
 1. Extract all NFRs grouped by category
-2. Write NFRs and component designs to bmad/context/nfr-mapping-context.md
+2. Write NFRs and component designs to accbmad/context/nfr-mapping-context.md
 3. Launch parallel agents for each NFR category
 4. Each agent maps NFRs to specific architectural decisions
 5. Main context assembles complete NFR mapping table
@@ -303,9 +303,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 ### Example Subagent Prompt
 ```
 Task: Design API Layer component for e-commerce system
-Context: Read bmad/context/architecture-scope.md for requirements and scope
+Context: Read accbmad/context/architecture-scope.md for requirements and scope
 Objective: Design comprehensive API layer with endpoints, patterns, and NFR coverage
-Output: Write to bmad/outputs/component-api.md
+Output: Write to accbmad/outputs/component-api.md
 
 Deliverables:
 1. Component responsibilities and boundaries

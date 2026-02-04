@@ -183,14 +183,14 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Break down Epic 1 into user stories with estimates | bmad/outputs/epic-1-stories.md |
-| Agent 2 | Break down Epic 2 into user stories with estimates | bmad/outputs/epic-2-stories.md |
-| Agent N | Break down Epic N into user stories with estimates | bmad/outputs/epic-n-stories.md |
+| Agent 1 | Break down Epic 1 into user stories with estimates | accbmad/outputs/epic-1-stories.md |
+| Agent 2 | Break down Epic 2 into user stories with estimates | accbmad/outputs/epic-2-stories.md |
+| Agent N | Break down Epic N into user stories with estimates | accbmad/outputs/epic-n-stories.md |
 
 **Coordination:**
 1. Load PRD/tech-spec and architecture documents
 2. Extract all epics from requirements
-3. Write shared context (requirements, architecture, sizing guidelines) to bmad/context/sprint-context.md
+3. Write shared context (requirements, architecture, sizing guidelines) to accbmad/context/sprint-context.md
 4. Launch parallel agents, one per epic for story breakdown
 5. Each agent creates 3-8 stories per epic with Fibonacci estimates
 6. Main context collects all stories and creates prioritized backlog
@@ -202,9 +202,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Analyze dependencies and create dependency graph | bmad/outputs/dependencies.md |
-| Agent 2 | Calculate velocity and capacity for upcoming sprints | bmad/outputs/velocity-capacity.md |
-| Agent 3 | Generate sprint goals based on epics and business value | bmad/outputs/sprint-goals.md |
+| Agent 1 | Analyze dependencies and create dependency graph | accbmad/outputs/dependencies.md |
+| Agent 2 | Calculate velocity and capacity for upcoming sprints | accbmad/outputs/velocity-capacity.md |
+| Agent 3 | Generate sprint goals based on epics and business value | accbmad/outputs/sprint-goals.md |
 
 **Coordination:**
 1. Complete epic breakdown workflow first (sequential dependency)
@@ -232,9 +232,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 ### Example Subagent Prompt
 ```
 Task: Break down "User Authentication" epic into user stories
-Context: Read bmad/context/sprint-context.md for requirements and architecture
+Context: Read accbmad/context/sprint-context.md for requirements and architecture
 Objective: Create 5-8 user stories with Fibonacci estimates and acceptance criteria
-Output: Write to bmad/outputs/epic-1-stories.md
+Output: Write to accbmad/outputs/epic-1-stories.md
 
 Deliverables:
 1. 5-8 user stories following "As a [user], I want [capability] so that [benefit]" format

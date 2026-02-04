@@ -179,9 +179,9 @@ Write results to: [specific file path]
 Before launching parallel agents, write shared context to a file:
 
 ```markdown
-1. Write shared context to bmad/context/current-task.md
+1. Write shared context to accbmad/context/current-task.md
 2. Launch agents that read from this file
-3. Each agent writes output to bmad/outputs/agent-{n}.md
+3. Each agent writes output to accbmad/outputs/agent-{n}.md
 4. Main context synthesizes all outputs
 ```
 

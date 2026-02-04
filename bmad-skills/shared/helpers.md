@@ -58,7 +58,7 @@ Steps:
 Purpose: Launch multiple subagents for parallel work
 
 Pattern:
-1. Prepare shared context file (bmad/context/current-task.md)
+1. Prepare shared context file (accbmad/context/current-task.md)
 2. For each task:
    - Create agent prompt with:
      * Task objective

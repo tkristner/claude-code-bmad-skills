@@ -34,7 +34,7 @@ Launch a subagent with the task as its primary instruction:
 Launch subagent with:
 - Task: Read shared/tasks/review-adversarial.md
 - Input: {content_to_review}
-- Output: Write findings to bmad/outputs/review-findings.md
+- Output: Write findings to accbmad/outputs/review-findings.md
 ```
 
 ## Task Structure

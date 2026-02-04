@@ -480,14 +480,14 @@ For complex projects (Level 3-4), use parallel analysis:
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Data model design | `bmad/outputs/data-model.md` |
-| Agent 2 | API design | `bmad/outputs/api-design.md` |
-| Agent 3 | NFR solutions | `bmad/outputs/nfr-solutions.md` |
+| Agent 1 | Data model design | `accbmad/outputs/data-model.md` |
+| Agent 2 | API design | `accbmad/outputs/api-design.md` |
+| Agent 3 | NFR solutions | `accbmad/outputs/nfr-solutions.md` |
 | Main | Synthesize into architecture | `accbmad/3-solutioning/architecture-*.md` |
 
 **Coordination:**
 1. Main context selects pattern and stack
-2. Write shared context to `bmad/context/arch-decisions.md`
+2. Write shared context to `accbmad/context/arch-decisions.md`
 3. Launch parallel agents for independent design tasks
 4. Collect outputs and synthesize
 5. Run quality review on combined result

@@ -353,16 +353,16 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Design home/landing screen with wireframe | bmad/outputs/screen-home.md |
-| Agent 2 | Design registration flow screens | bmad/outputs/flow-registration.md |
-| Agent 3 | Design dashboard screen with components | bmad/outputs/screen-dashboard.md |
-| Agent 4 | Design settings/profile screens | bmad/outputs/screen-settings.md |
-| Agent N | Design additional screens or flows | bmad/outputs/screen-n.md |
+| Agent 1 | Design home/landing screen with wireframe | accbmad/outputs/screen-home.md |
+| Agent 2 | Design registration flow screens | accbmad/outputs/flow-registration.md |
+| Agent 3 | Design dashboard screen with components | accbmad/outputs/screen-dashboard.md |
+| Agent 4 | Design settings/profile screens | accbmad/outputs/screen-settings.md |
+| Agent N | Design additional screens or flows | accbmad/outputs/screen-n.md |
 
 **Coordination:**
 1. Load requirements and user stories from PRD
 2. Identify major screens and user flows (typically 5-10)
-3. Write shared design context to bmad/context/ux-context.md (brand, patterns, tokens)
+3. Write shared design context to accbmad/context/ux-context.md (brand, patterns, tokens)
 4. Launch parallel agents, each designing one screen or flow
 5. Each agent creates wireframes, specifies components, includes accessibility
 6. Main context assembles complete UX design document
@@ -376,14 +376,14 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Design user onboarding flow | bmad/outputs/flow-onboarding.md |
-| Agent 2 | Design purchase/checkout flow | bmad/outputs/flow-checkout.md |
-| Agent 3 | Design account management flow | bmad/outputs/flow-account.md |
-| Agent 4 | Design error and recovery flows | bmad/outputs/flow-errors.md |
+| Agent 1 | Design user onboarding flow | accbmad/outputs/flow-onboarding.md |
+| Agent 2 | Design purchase/checkout flow | accbmad/outputs/flow-checkout.md |
+| Agent 3 | Design account management flow | accbmad/outputs/flow-account.md |
+| Agent 4 | Design error and recovery flows | accbmad/outputs/flow-errors.md |
 
 **Coordination:**
 1. Extract user journeys from requirements
-2. Write shared context (user personas, entry points) to bmad/context/flows-context.md
+2. Write shared context (user personas, entry points) to accbmad/context/flows-context.md
 3. Launch parallel agents for each independent user flow
 4. Each agent maps: entry point, steps, decision points, exit conditions
 5. Main context integrates flows and identifies navigation structure
@@ -396,10 +396,10 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Validate color contrast and visual accessibility | bmad/outputs/a11y-visual.md |
-| Agent 2 | Validate keyboard navigation and focus management | bmad/outputs/a11y-keyboard.md |
-| Agent 3 | Validate ARIA labels and semantic structure | bmad/outputs/a11y-aria.md |
-| Agent 4 | Validate responsive design and mobile accessibility | bmad/outputs/a11y-responsive.md |
+| Agent 1 | Validate color contrast and visual accessibility | accbmad/outputs/a11y-visual.md |
+| Agent 2 | Validate keyboard navigation and focus management | accbmad/outputs/a11y-keyboard.md |
+| Agent 3 | Validate ARIA labels and semantic structure | accbmad/outputs/a11y-aria.md |
+| Agent 4 | Validate responsive design and mobile accessibility | accbmad/outputs/a11y-responsive.md |
 
 **Coordination:**
 1. Load complete design document with all screens
@@ -416,15 +416,15 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Specify button component variants and states | bmad/outputs/component-buttons.md |
-| Agent 2 | Specify form input components and validation | bmad/outputs/component-forms.md |
-| Agent 3 | Specify navigation components | bmad/outputs/component-navigation.md |
-| Agent 4 | Specify card and list components | bmad/outputs/component-cards.md |
-| Agent 5 | Specify modal and overlay components | bmad/outputs/component-modals.md |
+| Agent 1 | Specify button component variants and states | accbmad/outputs/component-buttons.md |
+| Agent 2 | Specify form input components and validation | accbmad/outputs/component-forms.md |
+| Agent 3 | Specify navigation components | accbmad/outputs/component-navigation.md |
+| Agent 4 | Specify card and list components | accbmad/outputs/component-cards.md |
+| Agent 5 | Specify modal and overlay components | accbmad/outputs/component-modals.md |
 
 **Coordination:**
 1. Identify reusable component types from screen designs
-2. Write design system foundation to bmad/context/design-system.md
+2. Write design system foundation to accbmad/context/design-system.md
 3. Launch parallel agents, each specifying one component family
 4. Each agent defines: variants, states, props, accessibility, responsive behavior
 5. Main context assembles complete component library specification
@@ -434,9 +434,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 ### Example Subagent Prompt
 ```
 Task: Design registration flow screens with accessibility
-Context: Read bmad/context/ux-context.md for design system and patterns
+Context: Read accbmad/context/ux-context.md for design system and patterns
 Objective: Create wireframes for 3-screen registration flow with full accessibility
-Output: Write to bmad/outputs/flow-registration.md
+Output: Write to accbmad/outputs/flow-registration.md
 
 Deliverables:
 1. User flow diagram showing 3 screens (email entry, details, confirmation)

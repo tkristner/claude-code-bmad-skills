@@ -537,7 +537,7 @@ For complex skills with many components:
 
 **Coordination:**
 1. Gather requirements (main context)
-2. Write spec to `bmad/context/skill-spec.md`
+2. Write spec to `accbmad/context/skill-spec.md`
 3. Launch parallel agents
 4. Validate all outputs
 5. Assemble complete skill

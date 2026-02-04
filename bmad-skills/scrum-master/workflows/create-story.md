@@ -516,7 +516,7 @@ For large epics with many stories, use parallel story creation:
 
 **Coordination:**
 1. Main context gathers all shared context (architecture, PRD)
-2. Write to `bmad/context/story-context.md`
+2. Write to `accbmad/context/story-context.md`
 3. Launch parallel agents with story assignments
 4. Each agent creates complete story documents
 5. Main context updates sprint-status.yaml

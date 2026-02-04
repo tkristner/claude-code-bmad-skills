@@ -450,9 +450,9 @@ This skill leverages parallel subagents to maximize context utilization (each ag
 
 | Agent | Task | Output |
 |-------|------|--------|
-| Agent 1 | Review PR #1 using code review template | bmad/outputs/review-pr-1.md |
-| Agent 2 | Review PR #2 using code review template | bmad/outputs/review-pr-2.md |
-| Agent N | Review PR #N using code review template | bmad/outputs/review-pr-n.md |
+| Agent 1 | Review PR #1 using code review template | accbmad/outputs/review-pr-1.md |
+| Agent 2 | Review PR #2 using code review template | accbmad/outputs/review-pr-2.md |
+| Agent N | Review PR #N using code review template | accbmad/outputs/review-pr-n.md |
 
 **Coordination:**
 1. Identify PRs needing review
