@@ -11,7 +11,7 @@
 set -euo pipefail
 
 # Configuration
-BMAD_VERSION="1.3.0"
+BMAD_VERSION="1.4.0"
 CLAUDE_DIR="${HOME}/.claude"
 SKILLS_DIR="${CLAUDE_DIR}/skills/accbmad"
 COMMANDS_DIR="${CLAUDE_DIR}/commands/accbmad"
