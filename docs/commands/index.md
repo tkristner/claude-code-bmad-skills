@@ -140,20 +140,17 @@ Select level (0-4):
 project_name: "Real-time Chat Application"
 project_type: "web-app"
 project_level: 2
-output_folder: "docs"
+stories_folder: "accbmad/4-implementation/stories"
 
 bmm:
   workflow_status_file: "accbmad/status.yaml"
   sprint_status_file: "accbmad/4-implementation/sprint.yaml"
-
-paths:
-  docs: "docs"
-  stories: "accbmad/4-implementation/stories"
-  tests: "tests"
 ```
 
 Created directories:
-- docs/
+- accbmad/1-analysis/
+- accbmad/2-planning/
+- accbmad/3-solutioning/
 - accbmad/4-implementation/stories/
 
 Project initialized! Run /workflow-status to see next steps.

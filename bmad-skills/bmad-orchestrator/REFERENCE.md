@@ -236,7 +236,7 @@ project_type: "web-app|mobile-app|api|game|library|other"
 project_level: 0-4
 
 # Output settings
-output_folder: "docs"  # relative to project root
+stories_folder: "accbmad/4-implementation/stories"  # relative to project root
 stories_folder: "accbmad/4-implementation/stories"
 
 # Language settings
@@ -265,7 +265,7 @@ communication_language: "English"
 document_output_language: "English"
 
 # Default paths
-default_output_folder: "docs"
+default_stories_folder: "accbmad/4-implementation/stories"
 
 # Enabled modules
 modules_enabled:
@@ -315,14 +315,14 @@ Result = Global config + Project config (project overrides global)
 **Create workflow status:**
 ```
 Tool: Write
-Path: {project-root}/{output_folder}/bmm-workflow-status.yaml
+Path: {project-root}/{output_folder}/status.yaml
 Content: Processed template with variables substituted
 ```
 
 **Update workflow status:**
 ```
 Tool: Edit
-Path: {project-root}/{output_folder}/bmm-workflow-status.yaml
+Path: {project-root}/{output_folder}/status.yaml
 Old: status: "required"
 New: status: "accbmad/2-planning/prd-myapp-2025-01-11.md"
 ```
@@ -400,7 +400,7 @@ project_level: 2
 ```
 Project root: {project-root}/
 Config: {project-root}/accbmad/config.yaml
-Status: {project-root}/{output_folder}/bmm-workflow-status.yaml
+Status: {project-root}/{output_folder}/status.yaml
 Sprint: {project-root}/{output_folder}/sprint-status.yaml
 Stories: {project-root}/{output_folder}/stories/
 Templates: {project-root}/bmad/agent-overrides/ (optional)

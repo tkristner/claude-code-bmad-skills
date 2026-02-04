@@ -150,18 +150,19 @@ When BMAD is initialized in a project:
 
 ```
 project/
-├── bmad/
+├── accbmad/
 │   ├── config.yaml              # Project configuration
-│   ├── context/                 # Shared context for subagents
-│   └── outputs/                 # Subagent outputs
-├── docs/
-│   ├── bmm-workflow-status.yaml # Workflow progress tracking
-│   ├── sprint-status.yaml       # Sprint tracking (Phase 4)
-│   ├── stories/                 # User story documents
-│   ├── product-brief-*.md       # Phase 1 outputs
-│   ├── prd-*.md                 # Phase 2 outputs
-│   ├── tech-spec-*.md           # Phase 2 outputs
-│   └── architecture-*.md        # Phase 3 outputs
+│   ├── status.yaml              # Workflow progress tracking
+│   ├── 1-analysis/              # Phase 1 outputs
+│   │   └── product-brief-*.md
+│   ├── 2-planning/              # Phase 2 outputs
+│   │   ├── prd-*.md
+│   │   └── tech-spec-*.md
+│   ├── 3-solutioning/           # Phase 3 outputs
+│   │   └── architecture-*.md
+│   └── 4-implementation/        # Phase 4 outputs
+│       ├── sprint.yaml
+│       └── stories/
 └── .claude/
     └── commands/accbmad/        # Project-specific commands
 ```
@@ -191,7 +192,7 @@ If BMAD is already initialized:
 ```
 User: What's my project status?
 → Activates bmad-orchestrator
-→ Reads bmm-workflow-status.yaml
+→ Reads accbmad/status.yaml
 → Shows completed/pending workflows
 → Recommends next step
 ```

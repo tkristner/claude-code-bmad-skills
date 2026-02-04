@@ -8,12 +8,14 @@ Set up BMAD Method structure and configuration in the current project.
 2. Check for existing `accbmad/config.yaml`
 3. Create project structure:
    ```
-   bmad/
+   accbmad/
    ├── config.yaml
-   └── context/
-   docs/
-   ├── bmm-workflow-status.yaml
-   └── stories/
+   ├── status.yaml
+   ├── 1-analysis/
+   ├── 2-planning/
+   ├── 3-solutioning/
+   └── 4-implementation/
+       └── stories/
    ```
 4. Collect project info (name, type, level 0-4)
 5. Create configuration files

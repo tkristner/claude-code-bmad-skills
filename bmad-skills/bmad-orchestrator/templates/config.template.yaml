@@ -12,7 +12,6 @@ project_type: "{{PROJECT_TYPE}}"  # web-app, mobile-app, api, game, library, oth
 project_level: {{PROJECT_LEVEL}}  # 0-4 (see documentation for level definitions)
 
 # Output Configuration
-output_folder: "docs"  # Where to store BMAD documents
 stories_folder: "accbmad/4-implementation/stories"  # Where to store user stories
 
 # Language Settings

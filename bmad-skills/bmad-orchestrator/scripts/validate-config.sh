@@ -145,7 +145,7 @@ if grep -q "^output_folder:" "$CONFIG_FILE"; then
   OUTPUT_FOLDER=$(grep "^output_folder:" "$CONFIG_FILE" | sed 's/.*: *"\?\([^"]*\)"\?/\1/' | tr -d '"')
   success "output_folder: ${OUTPUT_FOLDER}"
 else
-  warning "output_folder not specified (will default to 'docs')"
+  success "Using default accbmad/ phase folders"
 fi
 
 # Check communication_language

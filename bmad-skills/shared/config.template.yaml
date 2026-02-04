@@ -15,7 +15,6 @@ project:
 # 4: Enterprise expansion (40+ stories)
 
 paths:
-  output_folder: "docs"
   stories_folder: "accbmad/4-implementation/stories"
   status_file: "accbmad/status.yaml"
   sprint_file: "accbmad/4-implementation/sprint.yaml"

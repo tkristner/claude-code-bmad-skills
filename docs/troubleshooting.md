@@ -159,10 +159,9 @@ This creates `accbmad/config.yaml` in your project root.
 
 2. **Product brief in wrong location**
 
-   Check your output folder:
-   ```yaml
-   # accbmad/config.yaml
-   output_folder: "docs"  # Product brief should be here
+   Product brief should be in the analysis folder:
+   ```bash
+   ls accbmad/1-analysis/
    ```
 
    Move file if needed:
@@ -297,10 +296,11 @@ yamllint accbmad/config.yaml
    chmod 755 docs
    ```
 
-3. **Incorrect output_folder**
-   ```yaml
-   # accbmad/config.yaml
-   output_folder: "docs"  # Must exist
+3. **BMAD directories don't exist**
+   ```bash
+   # Verify phase folders exist
+   ls accbmad/
+   # Should see: 1-analysis/ 2-planning/ 3-solutioning/ 4-implementation/
    ```
 
 ---
@@ -467,15 +467,13 @@ Then restart Claude Code.
 
 **Symptom:** Files not found on Windows
 
-**Fix:** Use forward slashes in config:
+**Fix:** Use forward slashes in paths:
 ```yaml
 # Works on all platforms
-output_folder: "docs"
-workflow_status_file: "docs/status.yaml"
+stories_folder: "accbmad/4-implementation/stories"
 
 # Not this
-output_folder: "docs\\"
-workflow_status_file: "docs\\status.yaml"
+stories_folder: "accbmad\\4-implementation\\stories"
 ```
 
 ---
@@ -684,10 +682,10 @@ If you've tried the fixes above and still have problems:
 3. /prd
 
 **Error:**
-"Cannot find product-brief.md in docs/"
+"Cannot find product-brief.md"
 
-**Config:**
-output_folder: "docs"
+**Expected location:**
+accbmad/1-analysis/product-brief.md
 
 **Files present:**
 accbmad/1-analysis/product-brief.md (exists)

@@ -22,7 +22,7 @@ Steps:
 
 ### Load-Workflow-Status
 ```
-Path: {output_folder}/bmm-workflow-status.yaml
+Path: accbmad/status.yaml
 Purpose: Get current workflow progress
 
 Steps:

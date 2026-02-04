@@ -54,7 +54,7 @@ communication_language: "English"
 document_output_language: "English"
 
 # Default folder for outputs (relative to project root)
-default_output_folder: "docs"
+default_stories_folder: "accbmad/4-implementation/stories"
 
 # Enabled modules
 # Uncomment to enable optional modules
@@ -135,8 +135,8 @@ project_type: "web-app"
 # Affects which workflows are required vs. optional
 project_level: 2
 
-# Output folder for documents (relative to project root)
-output_folder: "docs"
+# Stories folder
+stories_folder: "accbmad/4-implementation/stories"
 
 # BMM Module Settings
 bmm:
@@ -148,9 +148,6 @@ bmm:
 
 # Path configuration
 paths:
-  # Documentation output
-  docs: "docs"
-
   # User stories
   stories: "accbmad/4-implementation/stories"
 
@@ -241,21 +238,15 @@ git commit -m "Add BMAD project configuration"
 
 ### Environment-Specific Settings
 
-For different environments, use separate config files:
+For different environments, use separate config files if needed for stories location:
 
 ```yaml
 # accbmad/config.yaml (default)
 project_name: "My Project"
-output_folder: "docs"
-
-# accbmad/config.staging.yaml
-output_folder: "docs-staging"
-
-# accbmad/config.prod.yaml
-output_folder: "docs-prod"
+stories_folder: "accbmad/4-implementation/stories"
 ```
 
-Then copy the appropriate config before running BMAD commands.
+All BMAD documents are organized by phase in the `accbmad/` directory structure.
 
 ---
 
@@ -347,7 +338,7 @@ Templates are in `~/.claude/config/bmad/templates/`:
 - `prd.md` - PRD template
 - `tech-spec.md` - Tech spec template
 - `architecture.md` - Architecture template
-- `bmm-workflow-status.template.yaml` - Status tracking
+- `workflow-status.template.yaml` - Status tracking
 
 ### Modifying Templates
 

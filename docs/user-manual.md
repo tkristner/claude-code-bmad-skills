@@ -142,23 +142,22 @@ Après initialisation BMAD :
 
 ```
 votre-projet/
-├── bmad/
-│   ├── config.yaml           # Configuration projet
-│   ├── context/              # Contexte partagé (subagents)
-│   └── outputs/              # Sorties des subagents
-├── docs/
-│   ├── bmm-workflow-status.yaml  # Tracking des phases
-│   ├── sprint-status.yaml        # Tracking des sprints
-│   ├── product-brief-*.md        # Phase 1
-│   ├── prd-*.md                  # Phase 2
-│   ├── tech-spec-*.md            # Phase 2 (Level 0-1)
-│   ├── architecture-*.md         # Phase 3
-│   ├── epics.md                  # Epic breakdown
-│   └── stories/
-│       ├── STORY-001.md
-│       └── ...
+├── accbmad/
+│   ├── config.yaml              # Configuration projet
+│   ├── status.yaml              # Tracking des phases
+│   ├── 1-analysis/              # Phase 1
+│   │   └── product-brief-*.md
+│   ├── 2-planning/              # Phase 2
+│   │   ├── prd-*.md
+│   │   └── tech-spec-*.md
+│   ├── 3-solutioning/           # Phase 3
+│   │   └── architecture-*.md
+│   └── 4-implementation/        # Phase 4
+│       ├── sprint.yaml
+│       └── stories/
+│           └── STORY-*.md
 └── .claude/
-    └── commands/accbmad/     # Commandes projet
+    └── commands/accbmad/        # Commandes projet
 ```
 
 ---

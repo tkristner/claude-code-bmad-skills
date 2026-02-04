@@ -54,11 +54,14 @@ Each subagent has 200K tokens - leverage this for comprehensive analysis.
 ```
 {{PROJECT_NAME}}/
 ├── CLAUDE.md                    # This file
-├── bmad/
-│   └── config.yaml             # BMAD configuration
-├── docs/
-│   ├── bmm-workflow-status.yaml
-│   └── [generated documents]
+├── accbmad/
+│   ├── config.yaml             # BMAD configuration
+│   ├── status.yaml             # Workflow progress tracking
+│   ├── 1-analysis/             # Phase 1 outputs
+│   ├── 2-planning/             # Phase 2 outputs
+│   ├── 3-solutioning/          # Phase 3 outputs
+│   └── 4-implementation/       # Phase 4 outputs
+│       └── stories/
 └── src/
     └── [your code]
 ```

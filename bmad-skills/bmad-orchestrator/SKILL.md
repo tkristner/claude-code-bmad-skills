@@ -55,13 +55,14 @@ Initialize BMAD structure in the current project.
 **Steps:**
 1. Create directory structure:
    ```
-   bmad/
+   accbmad/
    ├── config.yaml
-   └── agent-overrides/
-
-   docs/
-   ├── bmm-workflow-status.yaml
-   └── stories/
+   ├── status.yaml
+   ├── 1-analysis/
+   ├── 2-planning/
+   ├── 3-solutioning/
+   └── 4-implementation/
+       └── stories/
 
    .claude/commands/accbmad/ (if not exists)
    ```
@@ -246,7 +247,7 @@ See [REFERENCE.md](REFERENCE.md) for detailed routing logic.
 project_name: "MyApp"
 project_type: "web-app"  # web-app, mobile-app, api, game, library, other
 project_level: 2         # 0-4
-output_folder: "docs"
+stories_folder: "accbmad/4-implementation/stories"
 communication_language: "English"
 ```
 
