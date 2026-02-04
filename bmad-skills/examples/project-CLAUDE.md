@@ -60,8 +60,10 @@ Each subagent has 200K tokens - leverage this for comprehensive analysis.
 │   ├── 1-analysis/             # Phase 1 outputs
 │   ├── 2-planning/             # Phase 2 outputs
 │   ├── 3-solutioning/          # Phase 3 outputs
-│   └── 4-implementation/       # Phase 4 outputs
-│       └── stories/
+│   ├── 4-implementation/       # Phase 4 outputs
+│   │   └── stories/
+│   ├── context/                # Subagent shared context
+│   └── outputs/                # Subagent outputs
 └── src/
     └── [your code]
 ```

@@ -109,6 +109,8 @@ mkdir -p "${BMAD_FOLDER}/1-analysis"
 mkdir -p "${BMAD_FOLDER}/2-planning"
 mkdir -p "${BMAD_FOLDER}/3-solutioning"
 mkdir -p "${BMAD_FOLDER}/4-implementation/stories"
+mkdir -p "${BMAD_FOLDER}/context"
+mkdir -p "${BMAD_FOLDER}/outputs"
 mkdir -p .claude/commands/accbmad
 
 echo -e "${GREEN}✓ Directories created${NC}"

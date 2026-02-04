@@ -61,8 +61,10 @@ Initialize BMAD structure in the current project.
    ├── 1-analysis/
    ├── 2-planning/
    ├── 3-solutioning/
-   └── 4-implementation/
-       └── stories/
+   ├── 4-implementation/
+   │   └── stories/
+   ├── context/           # Subagent shared context
+   └── outputs/           # Subagent outputs
 
    .claude/commands/accbmad/ (if not exists)
    ```

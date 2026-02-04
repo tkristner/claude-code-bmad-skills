@@ -160,9 +160,11 @@ project/
 │   │   └── tech-spec-*.md
 │   ├── 3-solutioning/           # Phase 3 outputs
 │   │   └── architecture-*.md
-│   └── 4-implementation/        # Phase 4 outputs
-│       ├── sprint.yaml
-│       └── stories/
+│   ├── 4-implementation/        # Phase 4 outputs
+│   │   ├── sprint.yaml
+│   │   └── stories/
+│   ├── context/                 # Subagent shared context
+│   └── outputs/                 # Subagent outputs
 └── .claude/
     └── commands/accbmad/        # Project-specific commands
 ```

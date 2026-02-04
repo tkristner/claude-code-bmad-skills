@@ -152,10 +152,11 @@ votre-projet/
 │   │   └── tech-spec-*.md
 │   ├── 3-solutioning/           # Phase 3
 │   │   └── architecture-*.md
-│   └── 4-implementation/        # Phase 4
-│       ├── sprint.yaml
-│       └── stories/
-│           └── STORY-*.md
+│   ├── 4-implementation/        # Phase 4
+│   │   ├── sprint.yaml
+│   │   └── stories/
+│   ├── context/                 # Contexte partagé (subagents)
+│   └── outputs/                 # Sorties des subagents
 └── .claude/
     └── commands/accbmad/        # Commandes projet
 ```

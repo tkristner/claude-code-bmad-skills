@@ -14,8 +14,10 @@ Set up BMAD Method structure and configuration in the current project.
    ├── 1-analysis/
    ├── 2-planning/
    ├── 3-solutioning/
-   └── 4-implementation/
-       └── stories/
+   ├── 4-implementation/
+   │   └── stories/
+   ├── context/
+   └── outputs/
    ```
 4. Collect project info (name, type, level 0-4)
 5. Create configuration files

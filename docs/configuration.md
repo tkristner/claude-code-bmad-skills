@@ -316,11 +316,13 @@ your-project/
 │   │   └── ux-design.md         # Created by /create-ux-design
 │   ├── 3-solutioning/
 │   │   └── architecture.md      # Created by /architecture
-│   └── 4-implementation/
-│       ├── sprint.yaml          # Sprint status
-│       └── stories/
-│           ├── STORY-001.md
-│           └── ...
+│   ├── 4-implementation/
+│   │   ├── sprint.yaml          # Sprint status
+│   │   └── stories/
+│   │       ├── STORY-001.md
+│   │       └── ...
+│   ├── context/                 # Subagent shared context
+│   └── outputs/                 # Subagent outputs
 └── [your code]
 ```
 
