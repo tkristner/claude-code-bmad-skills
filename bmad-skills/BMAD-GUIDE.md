@@ -184,7 +184,7 @@ If the project doesn't have BMAD initialized:
 ```
 User: Initialize BMAD for this project
 → Activates bmad-orchestrator
-→ Creates bmad/ and docs/ structure
+→ Creates accbmad/ structure
 → Sets project level and type
 → Recommends first workflow
 ```

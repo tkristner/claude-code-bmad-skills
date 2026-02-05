@@ -371,7 +371,7 @@ Warnings (allow CONDITIONAL):
 
 ### Step 4: Generate Report
 
-Save to: `docs/implementation-readiness-{date}.md`
+Save to: `accbmad/3-solutioning/implementation-readiness-{date}.md`
 
 ---
 
@@ -685,7 +685,7 @@ Validation is complete when:
 - [ ] Dependency graph analyzed for cycles
 - [ ] Estimation completeness verified
 - [ ] Overall status determined (PASS/CONDITIONAL/FAIL)
-- [ ] Report saved to `docs/implementation-readiness-{date}.md`
+- [ ] Report saved to `accbmad/3-solutioning/implementation-readiness-{date}.md`
 - [ ] Clear remediation steps provided for any issues
 
 ---

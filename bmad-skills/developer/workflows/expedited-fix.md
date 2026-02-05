@@ -256,7 +256,7 @@ If fix causes issues:
 
 **Create incident record within 24 hours:**
 
-Save to: `docs/incidents/{{YYYY-MM-DD}}-{{slug}}.md`
+Save to: `accbmad/4-implementation/incidents/{{YYYY-MM-DD}}-{{slug}}.md`
 
 ```markdown
 # [Developer] Incident: {{YYYY-MM-DD}} - {{brief_description}}
@@ -335,7 +335,7 @@ If tracking in BMAD sprint, add hotfix entry:
   priority: "must_have"
   status: "completed"
   type: "expedited_fix"
-  incident_doc: "docs/incidents/{{YYYY-MM-DD}}-{{slug}}.md"
+  incident_doc: "accbmad/4-implementation/incidents/{{YYYY-MM-DD}}-{{slug}}.md"
 ```
 
 ---

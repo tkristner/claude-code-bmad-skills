@@ -10,7 +10,7 @@
 
 **Inputs:** PRD or tech-spec, Architecture (if Level 2+), Epics/Stories document, Team capacity
 
-**Output:** `docs/sprint-plan-{project-name}-{date}.md`, `bmad/sprint-status.yaml`
+**Output:** `accbmad/4-implementation/sprint-plan-{project-name}-{date}.md`, `accbmad/4-implementation/sprint.yaml`
 
 **Duration:** 30-90 minutes depending on project level
 
@@ -36,7 +36,7 @@ Use this workflow when:
    - Tech-spec: `accbmad/2-planning/tech-spec-*.md` (if no PRD)
    - Architecture: `accbmad/3-solutioning/architecture-*.md` (Level 2+)
    - Epics: `docs/epics.md`
-3. **Check existing sprint status** - `bmad/sprint-status.yaml`
+3. **Check existing sprint status** - `accbmad/4-implementation/sprint.yaml`
    - If exists: Resume or plan next sprint
    - If not: First-time sprint planning
 4. **Extract project level** (0-4) from config
@@ -214,7 +214,7 @@ Capacity: 60 ÷ 2 = 30 points/sprint
 
 ### Part 7: Generate Sprint Plan Document
 
-**Save to:** `docs/sprint-plan-{project-name}-{date}.md`
+**Save to:** `accbmad/4-implementation/sprint-plan-{project-name}-{date}.md`
 
 **Document structure:**
 ```markdown
@@ -278,14 +278,14 @@ Begin Sprint 1 with `/dev-story STORY-001`
 
 ### Part 8: Initialize Sprint Status
 
-**Create/update:** `bmad/sprint-status.yaml`
+**Create/update:** `accbmad/4-implementation/sprint.yaml`
 
 ```yaml
 version: "6.0.0"
 project_name: "{project_name}"
 project_level: {level}
 current_sprint: 1
-sprint_plan_path: "docs/sprint-plan-{project}-{date}.md"
+sprint_plan_path: "accbmad/4-implementation/sprint-plan-{project}-{date}.md"
 
 sprints:
   - sprint_number: 1
@@ -329,8 +329,8 @@ Summary:
 Sprint 1 Goal: {goal}
 Sprint 1 Stories: {count} stories, {points} points
 
-Plan: docs/sprint-plan-{project}-{date}.md
-Status: bmad/sprint-status.yaml
+Plan: accbmad/4-implementation/sprint-plan-{project}-{date}.md
+Status: accbmad/4-implementation/sprint.yaml
 
 Ready to begin implementation!
 Next: /dev-story STORY-001

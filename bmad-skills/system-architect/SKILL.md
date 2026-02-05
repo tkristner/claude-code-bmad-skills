@@ -147,7 +147,7 @@ See [workflows/architecture.md](workflows/architecture.md) for detailed workflow
 5. Apply adversarial review to find gaps
 6. Generate readiness report with status
 
-**Output:** Implementation readiness report at `docs/implementation-readiness-report-{date}.md`
+**Output:** Implementation readiness report at `accbmad/3-solutioning/implementation-readiness-report-{date}.md`
 
 See [../bmad-orchestrator/workflows/check-implementation-readiness.md](../bmad-orchestrator/workflows/check-implementation-readiness.md) for detailed workflow (owned by bmad-orchestrator).
 

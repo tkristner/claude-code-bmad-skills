@@ -517,7 +517,7 @@ For significant decisions, create ADR:
 2. [Alternative 2]: Rejected because [reason]
 ```
 
-Save to: `docs/adr/ADR-{number}-{slug}.md`
+Save to: `accbmad/3-solutioning/adr/ADR-{number}-{slug}.md`
 
 ---
 

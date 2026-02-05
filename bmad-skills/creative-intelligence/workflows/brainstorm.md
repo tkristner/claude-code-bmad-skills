@@ -165,7 +165,7 @@ Format:
 
 ### Part 8: Generate Output
 
-**Save to:** `docs/brainstorming-{topic}-{date}.md`
+**Save to:** `accbmad/1-analysis/brainstorming-{topic}-{date}.md`
 
 **Document structure:**
 ```markdown

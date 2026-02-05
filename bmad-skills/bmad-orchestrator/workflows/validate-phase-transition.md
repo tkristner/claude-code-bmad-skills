@@ -281,7 +281,7 @@ Use before major phase transitions to catch issues early:
 
 ## Output Format
 
-Save to: `docs/validation-phase-{from}-{to}-{date}.md`
+Save to: `accbmad/3-solutioning/validation-phase-{from}-{to}-{date}.md`
 
 ```markdown
 # [Orchestrator] Phase Transition Validation Report
@@ -448,7 +448,7 @@ Validation is complete when:
 - [ ] Traceability matrix generated (where applicable)
 - [ ] Gaps identified with severity
 - [ ] Remediation guidance provided
-- [ ] Report saved to `docs/validation-phase-*.md`
+- [ ] Report saved to `accbmad/3-solutioning/validation-phase-*.md`
 - [ ] Clear PASS/WARN/FAIL status
 
 ---

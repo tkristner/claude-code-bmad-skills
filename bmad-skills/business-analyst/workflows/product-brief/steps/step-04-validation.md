@@ -77,7 +77,7 @@ How would you like to proceed?
 
 ### On Completion
 
-1. Save document to `docs/`
+1. Save document to `accbmad/1-analysis/`
 2. Update `accbmad/status.yaml`
 3. Clear workflow state
 4. Show completion message with next steps

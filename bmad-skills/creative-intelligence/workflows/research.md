@@ -230,7 +230,7 @@ Use TodoWrite to track: Define Scope → Select Methods → Gather Data → Anal
 
 ### Part 7: Generate Report
 
-**Save to:** `docs/research-{topic}-{date}.md`
+**Save to:** `accbmad/1-analysis/research-{topic}-{date}.md`
 
 **Structure:**
 ```markdown

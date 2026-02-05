@@ -130,7 +130,7 @@ Analyze existing codebase and generate comprehensive `project-context.md` file w
 5. **Quality Tool Detection** - Linters, formatters, type checkers
 6. **Critical Pattern Extraction** - Error handling, logging, auth, database patterns
 
-**Output:** `docs/project-context.md`
+**Output:** `accbmad/3-solutioning/project-context.md`
 
 **Trigger keywords:** generate project context, analyze codebase, brownfield setup, project context, ai rules, code conventions, understand codebase, reverse engineer, existing project, implementation rules, agent guidelines
 
@@ -433,7 +433,7 @@ find . -type f \( -name "*.test.*" -o -name "*_test.*" -o -name "test_*" \) 2>/d
 ```
 
 **Integration with Developer Workflows:**
-After context generation, `/quick-dev` and `/dev-story` automatically load `docs/project-context.md` to ensure AI-generated code follows established patterns.
+After context generation, `/quick-dev` and `/dev-story` automatically load `accbmad/3-solutioning/project-context.md` to ensure AI-generated code follows established patterns.
 
 ### Level 0 Project (Single Change)
 

@@ -20,12 +20,12 @@ document_output_language: "English"  # Language for generated documents
 
 # Optional: Override agent behaviors
 # Uncomment and customize as needed
-# agent_overrides_folder: "bmad/agent-overrides"
+# agent_overrides_folder: "accbmad/agent-overrides"
 
 # Optional: Custom templates
 # template_overrides:
-#   prd: "bmad/templates/custom-prd.md"
-#   tech_spec: "bmad/templates/custom-tech-spec.md"
+#   prd: "accbmad/templates/custom-prd.md"
+#   tech_spec: "accbmad/templates/custom-tech-spec.md"
 
 # Optional: Project-specific settings
 # auto_update_status: true

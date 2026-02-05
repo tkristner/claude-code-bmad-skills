@@ -10,7 +10,7 @@
 
 **Inputs:** Completed sprint/epic, story files, sprint-status.yaml
 
-**Output:** `docs/retrospective-{epic|sprint}-{number}-{date}.md`
+**Output:** `accbmad/4-implementation/retrospective-{epic|sprint}-{number}-{date}.md`
 
 **Duration:** 30-60 minutes depending on scope
 
@@ -282,7 +282,7 @@ Use this workflow when:
 
 **Objective:** Create permanent record of retrospective.
 
-**Output:** `docs/retrospective-{scope}-{number}-{date}.md`
+**Output:** `accbmad/4-implementation/retrospective-{scope}-{number}-{date}.md`
 
 **Document Structure:**
 
@@ -376,7 +376,7 @@ participants: Scrum Master (AI), User
 
 1. **Save Document**
 
-   Save to: `docs/retrospective-{scope}-{N}-{date}.md`
+   Save to: `accbmad/4-implementation/retrospective-{scope}-{N}-{date}.md`
 
 2. **Update Sprint Status**
 
@@ -390,7 +390,7 @@ participants: Scrum Master (AI), User
    Retrospective Complete!
 
    Reviewed: {Sprint|Epic} {N}
-   Document: docs/retrospective-{scope}-{N}-{date}.md
+   Document: accbmad/4-implementation/retrospective-{scope}-{N}-{date}.md
 
    Key Takeaways:
    - {takeaway 1}
@@ -496,7 +496,7 @@ Retrospective is complete when:
 1. All content minimums met (3+3+2)
 2. Every action item has owner AND deadline AND success criteria
 3. Previous actions reviewed and addressed
-4. Document saved to `docs/retrospective-sprint-{N}.md`
+4. Document saved to `accbmad/4-implementation/retrospective-sprint-{N}.md`
 5. Action items added to next sprint backlog (if applicable)
 
 **Not ready if:**

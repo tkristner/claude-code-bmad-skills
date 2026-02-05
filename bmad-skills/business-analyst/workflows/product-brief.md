@@ -139,7 +139,7 @@ data:
 ### Clearing State
 
 On workflow completion:
-- Archive to `bmad/completed/product-brief-{{timestamp}}.yaml`
+- Archive to `accbmad/completed/product-brief-{{timestamp}}.yaml`
 - Or delete `accbmad/workflow-state.yaml`
 
 ---

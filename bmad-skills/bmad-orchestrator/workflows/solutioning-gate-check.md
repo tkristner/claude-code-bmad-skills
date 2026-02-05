@@ -14,7 +14,7 @@ Comprehensive validation that all Phase 3 deliverables are complete before start
    - **Dependency Health**: Cycle detection, valid references
    - **Estimation Completeness**: All stories have points
 3. Generate comprehensive readiness report
-4. Save to `docs/implementation-readiness-{date}.md`
+4. Save to `accbmad/3-solutioning/implementation-readiness-{date}.md`
 
 ## Status
 - PASS: All categories pass, ready for Sprint 1

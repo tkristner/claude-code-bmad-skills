@@ -120,7 +120,7 @@ Add to your Claude Code settings (`~/.claude/settings.json` or `.claude/settings
 > Initialize this project with BMAD
 
 Claude will use bmad-orchestrator to:
-1. Create bmad/ directory structure
+1. Create accbmad/ directory structure
 2. Set up docs/ for outputs
 3. Create workflow status tracking
 4. Determine project level

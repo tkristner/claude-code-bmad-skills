@@ -17,7 +17,7 @@ set -euo pipefail
 find_status_file() {
     local locations=(
         "accbmad/4-implementation/sprint.yaml"
-        "bmad/sprint-status.yaml"
+        "accbmad/4-implementation/sprint.yaml"
         ".bmad/sprint-status.yaml"
     )
 

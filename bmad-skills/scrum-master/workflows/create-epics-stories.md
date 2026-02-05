@@ -10,7 +10,7 @@
 
 **Inputs:** PRD (`accbmad/2-planning/prd-*.md`), Architecture (`accbmad/3-solutioning/architecture-*.md`, optional)
 
-**Output:** `docs/epics.md` - Complete epic and story breakdown
+**Output:** `accbmad/2-planning/epics.md` - Complete epic and story breakdown
 
 **Duration:** 60-120 minutes depending on project complexity
 
@@ -46,7 +46,7 @@ Use this workflow when:
 1. **Load project context** - Check for `accbmad/config.yaml` or `CLAUDE.md`
 2. **Verify PRD exists** - Search `docs/*prd*.md`
 3. **Check for architecture** - Search `docs/*architecture*.md` (optional for Level 0-1)
-4. **Load existing epics** - Check if `docs/epics.md` already exists (resume vs new)
+4. **Load existing epics** - Check if `accbmad/2-planning/epics.md` already exists (resume vs new)
 5. **Determine project level** - Affects story count and complexity
 
 ---
@@ -381,7 +381,7 @@ Requirements Coverage:
 
 **Objective:** Create the final epics.md document.
 
-**Output Location:** `docs/epics.md`
+**Output Location:** `accbmad/2-planning/epics.md`
 
 **Document Structure:**
 
@@ -444,7 +444,7 @@ So that {value_benefit}.
 ```
 Epic Breakdown Complete!
 
-📋 Created: docs/epics.md
+📋 Created: accbmad/2-planning/epics.md
 📊 Summary:
    - {N} Epics
    - {M} Stories total
@@ -484,7 +484,7 @@ For large PRDs (15+ requirements), use parallel agents:
 3. **Launch parallel agents:** One per epic (up to 6 concurrent)
 4. **Each agent:** Creates 3-6 stories with acceptance criteria and estimates
 5. **Collect outputs:** Read all `accbmad/outputs/epic-*.md` files
-6. **Synthesize:** Combine into final `docs/epics.md`
+6. **Synthesize:** Combine into final `accbmad/2-planning/epics.md`
 7. **Validate:** Check 100% FR coverage, no orphans
 
 ### Example Subagent Prompt
@@ -526,7 +526,7 @@ Format each story with:
 **Tool Usage:**
 - Use Glob to find PRD: `docs/*prd*.md`
 - Use Read to load PRD completely
-- Use Write to save `docs/epics.md`
+- Use Write to save `accbmad/2-planning/epics.md`
 - Use TodoWrite to track epic breakdown progress
 
 **Quality Checks:**

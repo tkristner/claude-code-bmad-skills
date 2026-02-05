@@ -12,7 +12,7 @@
 
 **Inputs:** Existing codebase
 
-**Output:** `docs/project-context.md`
+**Output:** `accbmad/3-solutioning/project-context.md`
 
 **Duration:** 15-30 minutes
 
@@ -259,7 +259,7 @@ ls package.json requirements.txt pyproject.toml go.mod Cargo.toml pom.xml 2>/dev
 4. **For separate contexts** - Generate:
    - `docs/project-context-frontend.md`
    - `docs/project-context-backend.md`
-   - `docs/project-context.md` (index linking to others)
+   - `accbmad/3-solutioning/project-context.md` (index linking to others)
 
 **Monorepo Detection:**
 
@@ -538,7 +538,7 @@ Are these findings accurate?
    - Patterns to match (examples to emulate)
 
 4. **Save file:**
-   - Primary location: `docs/project-context.md`
+   - Primary location: `accbmad/3-solutioning/project-context.md`
    - Alternative: Project root if no `docs/` directory
 
 ---
@@ -550,7 +550,7 @@ Are these findings accurate?
 ```
 ## Project Context Generated
 
-**File:** docs/project-context.md
+**File:** accbmad/3-solutioning/project-context.md
 
 **Sections Included:**
 - Technology Stack & Versions
@@ -605,7 +605,7 @@ Would you like me to:
 
 **If user selects [A]:**
 1. Run full context generation workflow
-2. Save to `docs/project-context.md`
+2. Save to `accbmad/3-solutioning/project-context.md`
 3. Continue with BMAD initialization
 4. Reference context in workflow recommendations
 
@@ -628,7 +628,7 @@ Following established patterns for implementation.
 Both workflows check for project context:
 ```bash
 # [Orchestrator] Quick-dev pre-flight
-test -f docs/project-context.md && cat docs/project-context.md
+test -f accbmad/3-solutioning/project-context.md && cat accbmad/3-solutioning/project-context.md
 ```
 
 ---
@@ -794,13 +794,13 @@ User: Y
 
 ## Step 9: Generating Context Document
 
-Writing to docs/project-context.md...
+Writing to accbmad/3-solutioning/project-context.md...
 
 ---
 
 ## Project Context Generated
 
-**File:** docs/project-context.md
+**File:** accbmad/3-solutioning/project-context.md
 
 **Summary:**
 - Technology: TypeScript 5.3, Next.js 14, Prisma 5.8
@@ -868,9 +868,9 @@ User: A
 
 ## Generated Unified Context
 
-Writing to docs/project-context.md...
+Writing to accbmad/3-solutioning/project-context.md...
 
-**File:** docs/project-context.md
+**File:** accbmad/3-solutioning/project-context.md
 
 **Sections:**
 - Technology Stack (3 stacks documented)
