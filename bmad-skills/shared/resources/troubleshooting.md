@@ -1,10 +1,3 @@
----
-layout: default
-title: "Troubleshooting Guide - Another Claude-Code BMAD"
-description: "Solutions for common Another Claude-Code BMAD issues. Installation problems, command errors, configuration issues, and workflow troubleshooting."
-keywords: "BMAD troubleshooting, Claude Code errors, BMAD installation problems, workflow issues"
----
-
 # Troubleshooting Guide
 
 Solutions for common issues when using Another Claude-Code BMAD.
@@ -643,13 +636,53 @@ rm accbmad/4-implementation/sprint.yaml
 
 ---
 
+## Agent Teams Issues
+
+### Team Mode Not Offered
+
+**Symptom:** `/dev-sprint-auto` doesn't offer team mode
+
+**Causes & Fixes:**
+
+1. **Agent Teams feature not available** in your Claude Code version
+2. **Project scope too small** — team mode needs 2+ independent stories
+3. **Use `--team` flag** to force team mode and see specific errors
+
+### Teammates Not Picking Up Tasks
+
+**Symptom:** Tasks remain unclaimed
+
+**Fixes:**
+1. Check `TaskList` for unclaimed tasks
+2. Verify teammate was spawned with correct `team_name`
+3. Ensure team name starts with `bmad-` prefix (required for hooks)
+
+### Hook Not Triggering
+
+**Symptom:** TeammateIdle or TaskCompleted hook doesn't fire
+
+**Fixes:**
+1. Verify hooks registered in `settings.json`
+2. Check scripts are executable: `chmod +x bmad-skills/hooks/*.sh`
+3. Ensure team name starts with `bmad-` prefix
+
+### Task Completion Rejected
+
+**Symptom:** Task marked complete but hook rejects it
+
+**Fixes:**
+1. Check hook output for validation error message
+2. Verify expected output files exist at paths mentioned in task description
+3. For dev tasks, ensure tests pass locally
+
+---
+
 ## Getting Help
 
 ### Check Documentation
 
-- [Getting Started](./getting-started) - Installation and first steps
-- [Commands Reference](./commands/) - All command details
-- [Configuration](./configuration) - All config options
+- Configuration guide: `bmad-skills/shared/resources/configuration-guide.md`
+- Getting started: see README.md
 
 ### Report Issues
 
@@ -669,7 +702,7 @@ If you've tried the fixes above and still have problems:
 
 ```markdown
 **Environment:**
-- Another Claude-Code BMAD: 1.3.0
+- Another Claude-Code BMAD: 1.6.0
 - OS: macOS 14.0
 - Claude Code: 1.0.0
 

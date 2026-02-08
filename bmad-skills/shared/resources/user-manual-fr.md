@@ -1,13 +1,6 @@
----
-layout: default
-title: "Manuel Utilisateur - Another Claude-Code BMAD"
-description: "Guide complet pour utiliser Another Claude-Code BMAD - workflows, commandes, bonnes pratiques"
-keywords: "BMAD Method, Claude Code, manuel utilisateur, agile AI, développement assisté"
----
-
 # Manuel Utilisateur - Another Claude-Code BMAD
 
-**Version:** 1.3.0
+**Version:** 1.6.0
 **Date:** Février 2026
 
 Ce manuel décrit l'utilisation d'Another Claude-Code BMAD, un fork optimisé des BMAD Skills pour Claude Code.
@@ -1055,4 +1048,4 @@ User: /qa-automate src/services/orderService.js
 
 ---
 
-*Ce manuel est généré pour Another Claude-Code BMAD v1.3.0 - Février 2026*
+*Ce manuel est généré pour Another Claude-Code BMAD v1.6.0 - Février 2026*

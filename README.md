@@ -563,14 +563,14 @@ your-project/
 
 ## Documentation
 
-Full documentation is available at the [GitHub Pages site](https://tkristner.github.io/Another_Claude-Code_BMAD/):
+All documentation lives in the repository under `bmad-skills/shared/resources/`:
 
-- [Getting Started](https://tkristner.github.io/Another_Claude-Code_BMAD/getting-started)
-- [User Manual (French)](https://tkristner.github.io/Another_Claude-Code_BMAD/user-manual)
-- [Skills Reference](https://tkristner.github.io/Another_Claude-Code_BMAD/skills/)
-- [Commands Reference](https://tkristner.github.io/Another_Claude-Code_BMAD/commands/)
-- [Configuration](https://tkristner.github.io/Another_Claude-Code_BMAD/configuration)
-- [Troubleshooting](https://tkristner.github.io/Another_Claude-Code_BMAD/troubleshooting)
+- [Configuration Guide](bmad-skills/shared/resources/configuration-guide.md) — All YAML settings explained
+- [Troubleshooting](bmad-skills/shared/resources/troubleshooting.md) — Common issues and fixes
+- [Examples](bmad-skills/shared/resources/examples.md) — Real-world usage examples
+- [User Manual (French)](bmad-skills/shared/resources/user-manual-fr.md) — Manuel utilisateur en français
+- [Subagent Patterns](bmad-skills/BMAD-SUBAGENT-PATTERNS.md) — Multi-agent coordination patterns
+- [Agent Teams Guide](bmad-skills/BMAD-AGENT-TEAMS.md) — When and how to use Agent Teams
 
 ---
 

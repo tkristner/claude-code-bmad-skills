@@ -1,10 +1,3 @@
----
-layout: default
-title: "Examples - Another Claude-Code BMAD"
-description: "Real-world examples of using Another Claude-Code BMAD. Complete project walkthroughs from product brief to implementation."
-keywords: "BMAD examples, Claude Code tutorials, agile workflow examples, development workflow tutorial"
----
-
 # Examples
 
 Learn Another Claude-Code BMAD through complete, real-world examples. Each example shows the full workflow from start to finish.
@@ -1128,7 +1121,3 @@ Use `/create-agent` and `/create-workflow` to add domain-specific capabilities.
 ---
 
 ## Next Steps
-
-- Review [Configuration](../configuration) options
-- Check [Troubleshooting](../troubleshooting) if you hit issues
-- Return to [Commands Reference](../commands/) for details

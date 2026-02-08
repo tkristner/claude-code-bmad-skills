@@ -1,10 +1,3 @@
----
-layout: default
-title: "Configuration Guide - Another Claude-Code BMAD"
-description: "Complete guide to configuring Another Claude-Code BMAD. Global settings, project settings, and customization options."
-keywords: "BMAD configuration, Claude Code settings, BMAD customization, workflow configuration"
----
-
 # Configuration Guide
 
 Another Claude-Code BMAD uses YAML configuration files to customize behavior. This guide covers all configuration options.
@@ -35,7 +28,7 @@ The global config is created during installation at `~/.claude/config/accbmad/co
 # Location: ~/.claude/config/accbmad/config.yaml
 
 # Version of BMAD
-version: "1.3.0"
+version: "1.6.0"
 
 # IDE/Editor (always claude-code for this version)
 ide: "claude-code"
@@ -297,7 +290,7 @@ All BMAD documents are organized by phase in the `accbmad/` directory structure.
 │       ├── research.md
 │       ├── create-agent.md
 │       ├── create-workflow.md
-│       └── ... (34 commands total)
+│       └── ... (37 commands total)
 └── hooks/
 ```
 
@@ -422,6 +415,19 @@ PRD is recommended when:
 
 ---
 
+## Agent Teams Hooks
+
+BMAD includes lifecycle hooks for Agent Teams coordination:
+
+| Hook | Trigger | Config in |
+|------|---------|-----------|
+| `bmad-teammate-idle.sh` | TeammateIdle | `settings.json` |
+| `bmad-task-completed.sh` | TaskCompleted | `settings.json` |
+
+These hooks are registered in `bmad-skills/settings.json` and activate only for teams with the `bmad-` prefix.
+
+---
+
 ## Migration & Upgrades
 
 ### Upgrading BMAD
@@ -446,7 +452,7 @@ When a new version is released:
 Look at the first line of any SKILL.md file or check your global config:
 
 ```yaml
-version: "1.3.0"
+version: "1.6.0"
 ```
 
 ---
@@ -545,6 +551,6 @@ project_level: 3
 
 ## Next Steps
 
-- Review [Troubleshooting](./troubleshooting) for common issues
-- See [Examples](./examples/) for configuration in action
-- Return to [Getting Started](./getting-started) for setup
+- Review [Troubleshooting](bmad-skills/shared/resources/troubleshooting-guide.md) for common issues
+- See [Examples](bmad-skills/shared/resources/examples/) for configuration in action
+- Return to [Getting Started](bmad-skills/shared/resources/getting-started-guide.md) for setup
