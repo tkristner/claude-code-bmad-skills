@@ -429,17 +429,17 @@ Enregistré : docs/epics.md
 | Commande | Description |
 |----------|-------------|
 | `/dev-story STORY-ID` | Implémenter une story |
-| `/dev-story-auto` | **Exécution autonome du sprint** |
+| `/dev-sprint-auto` | **Exécution autonome du sprint** |
 | `/quick-dev` | Implémentation rapide (avec /quick-spec) |
 | `/code-review` | Code review adversarial |
 | `/qa-automate` | Génération de tests automatisée |
 
-**Nouveau : /dev-story-auto (Mode Autonome)**
+**Nouveau : /dev-sprint-auto (Mode Autonome)**
 
 Exécute automatiquement **toutes les stories pending** du sprint :
 
 ```
-User: /dev-story-auto
+User: /dev-sprint-auto
 
 Developer: Démarrage du développement autonome...
 
@@ -488,10 +488,10 @@ Stories: 4/4 ✓
 
 **Options :**
 ```bash
-/dev-story-auto              # Toutes les stories pending
-/dev-story-auto --max 3      # Maximum 3 stories
-/dev-story-auto --story S-18 # Une seule story
-/dev-story-auto --dry-run    # Afficher le plan seulement
+/dev-sprint-auto              # Toutes les stories pending
+/dev-sprint-auto --max 3      # Maximum 3 stories
+/dev-sprint-auto --story S-18 # Une seule story
+/dev-sprint-auto --dry-run    # Afficher le plan seulement
 ```
 
 **Conditions d'arrêt (HALT) :**
@@ -730,7 +730,7 @@ Claude Code active automatiquement le skill approprié basé sur vos mots-clés 
 | Architecture | `/architecture` | 3 | Architecture système |
 | Sprint Planning | `/sprint-planning` | 4 | Planification des sprints |
 | Dev Story | `/dev-story STORY-ID` | 4 | Implémentation story |
-| **Dev Story Auto** | `/dev-story-auto` | 4 | **Exécution autonome du sprint** |
+| **Dev Story Auto** | `/dev-sprint-auto` | 4 | **Exécution autonome du sprint** |
 
 ### Workflows Rapides (Quick Flow)
 
@@ -1025,7 +1025,7 @@ User: /qa-automate src/services/orderService.js
 /sprint-planning       # Planification sprints
 /create-story          # Créer une story
 /dev-story STORY-ID    # Implémenter une story
-/dev-story-auto        # Exécution autonome du sprint (toutes stories)
+/dev-sprint-auto        # Exécution autonome du sprint (toutes stories)
 /quick-dev [path]      # Implémentation rapide
 /code-review [path]    # Code review adversarial
 /qa-automate [path]    # Génération tests

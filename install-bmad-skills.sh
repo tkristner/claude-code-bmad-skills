@@ -11,7 +11,7 @@
 set -euo pipefail
 
 # Configuration
-BMAD_VERSION="1.5.0"
+BMAD_VERSION="1.6.0"
 CLAUDE_DIR="${HOME}/.claude"
 SKILLS_DIR="${CLAUDE_DIR}/skills/accbmad"
 COMMANDS_DIR="${CLAUDE_DIR}/commands/accbmad"
@@ -223,7 +223,7 @@ install_commands() {
 
         # developer workflows
         ["developer/workflows/dev-story.md"]="dev-story.md"
-        ["developer/workflows/dev-story-auto.md"]="dev-story-auto.md"
+        ["developer/workflows/dev-sprint-auto.md"]="dev-sprint-auto.md"
         ["developer/workflows/quick-dev.md"]="quick-dev.md"
         ["developer/workflows/code-review.md"]="code-review.md"
         ["developer/workflows/qa-automate.md"]="qa-automate.md"
@@ -233,6 +233,11 @@ install_commands() {
         ["ux-designer/workflows/create-ux-design.md"]="create-ux-design.md"
         ["ux-designer/workflows/wcag-validate.md"]="wcag-validate.md"
         ["ux-designer/workflows/check-contrast.md"]="check-contrast.md"
+
+        # agent team workflows
+        ["bmad-orchestrator/workflows/team-research.md"]="team-research.md"
+        ["bmad-orchestrator/workflows/team-review.md"]="team-review.md"
+        ["scrum-master/workflows/team-implement.md"]="team-implement.md"
 
         # creative-intelligence workflows
         ["creative-intelligence/workflows/brainstorm.md"]="brainstorm.md"
@@ -287,6 +292,12 @@ install_documentation() {
     if [ -f "${SOURCE_DIR}/BMAD-SUBAGENT-PATTERNS.md" ]; then
         cp "${SOURCE_DIR}/BMAD-SUBAGENT-PATTERNS.md" "${SKILLS_DIR}/SUBAGENT-PATTERNS.md"
         log_success "Subagent patterns installed"
+    fi
+
+    # Copy BMAD-AGENT-TEAMS.md
+    if [ -f "${SOURCE_DIR}/BMAD-AGENT-TEAMS.md" ]; then
+        cp "${SOURCE_DIR}/BMAD-AGENT-TEAMS.md" "${SKILLS_DIR}/AGENT-TEAMS.md"
+        log_success "Agent Teams guide installed"
     fi
 }
 
@@ -354,13 +365,14 @@ Installation locations:
   - creative-intelligence (Research & Brainstorming)
   - builder (Create custom skills)
 
-✓ 34 Workflow Commands
+✓ 37 Workflow Commands
   - /workflow-init, /workflow-status, /generate-project-context
   - /product-brief, /prd, /tech-spec, /quick-spec, /validate-prd
   - /architecture, /solutioning-gate-check, /check-implementation-readiness
   - /sprint-planning, /create-story, /create-epics-stories, /retrospective
-  - /dev-story, /dev-story-auto, /quick-dev, /expedited-fix
+  - /dev-story, /dev-sprint-auto, /quick-dev, /expedited-fix
   - /code-review, /qa-automate
+  - /team-research, /team-implement, /team-review  (Agent Teams)
   - /brainstorm, /research
   - /create-ux-design, /wcag-validate, /check-contrast
   - /create-agent, /create-workflow

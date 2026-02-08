@@ -97,6 +97,131 @@ Pattern:
 5. Write synthesized output
 ```
 
+## Team Operations
+
+### Check-Teams-Available
+```
+Purpose: Detect if Agent Teams feature is available
+
+Steps:
+1. Check if TeamCreate, SendMessage, TaskCreate tools are accessible
+2. If available → return true, team workflows can proceed
+3. If unavailable → return false, fall back to subagent patterns
+
+Usage:
+- Call at the start of any /team-* workflow
+- If false, redirect to equivalent subagent pattern in BMAD-SUBAGENT-PATTERNS.md
+```
+
+### Create-BMAD-Team
+```
+Purpose: Create a team with BMAD naming convention
+
+Naming Convention: bmad-{workflow}-{project_name}
+  - bmad-research-myapp
+  - bmad-implement-myapp
+  - bmad-review-myapp
+
+Steps:
+1. Load project config (helpers.md#Load-Project-Config)
+2. Derive team_name: "bmad-{workflow}-{config.project.name}"
+3. Call TeamCreate with:
+   - team_name: derived name
+   - description: workflow-specific purpose
+4. Return team_name for use by teammates
+
+Example:
+  TeamCreate(
+    team_name: "bmad-research-myapp",
+    description: "Adversarial multi-perspective research for MyApp"
+  )
+```
+
+### Spawn-Teammate
+```
+Purpose: Launch a teammate that joins the BMAD team
+
+Steps:
+1. Call Task tool with:
+   - subagent_type: "general-purpose"
+   - team_name: from Create-BMAD-Team
+   - name: descriptive role name (e.g., "market-researcher", "security-reviewer")
+   - mode: "default" or "plan" (if plan approval required)
+   - prompt: self-contained task description with:
+     * Role and expertise
+     * Assigned tasks/dimensions
+     * Output expectations
+     * Team coordination instructions
+2. Return teammate reference
+
+Parameters:
+- subagent_type: string (required, recommend "general-purpose")
+- team_name: string (required)
+- name: string (required, unique within team)
+- prompt: string (required, self-contained task description with role and expertise)
+- mode: string (optional, "default" | "plan" | "delegate")
+```
+
+### Distribute-Tasks
+```
+Purpose: Create tasks for team members via shared task list
+
+Steps:
+1. For each work item:
+   - Call TaskCreate with:
+     * subject: clear task title
+     * description: detailed requirements
+     * activeForm: present continuous description
+2. Optionally set dependencies with TaskUpdate:
+   - addBlockedBy: for sequential dependencies
+   - addBlocks: for downstream tasks
+3. Assign owners with TaskUpdate:
+   - owner: teammate name
+
+Pattern:
+  TaskCreate(subject: "Research market trends", description: "...", activeForm: "Researching market trends")
+  TaskUpdate(taskId: "1", owner: "market-researcher")
+```
+
+### Collect-Team-Results
+```
+Purpose: Monitor team progress and gather results
+
+Steps:
+1. Call TaskList to check overall progress
+2. For each completed task:
+   - Read output files referenced in task description
+   - Collect findings/deliverables
+3. If tasks still pending:
+   - Wait for teammate messages (auto-delivered)
+   - Check TaskList periodically
+4. When all tasks complete:
+   - Aggregate results for synthesis
+5. Return collected results
+
+Monitoring Pattern:
+  Loop:
+    status = TaskList()
+    if all tasks completed → break
+    process incoming teammate messages
+    continue
+```
+
+### Shutdown-Team
+```
+Purpose: Gracefully shut down all teammates and clean up
+
+Steps:
+1. Read team config: ~/.claude/teams/{team-name}/config.json
+2. For each teammate in config.members:
+   - SendMessage(type: "shutdown_request", recipient: teammate.name)
+3. Wait for shutdown confirmations
+4. Optionally call TeamDelete to remove team resources
+5. Log team completion
+
+Note: Only shut down after all tasks are completed or explicitly cancelled.
+```
+
 ## Document Operations
 
 ### Load-Template

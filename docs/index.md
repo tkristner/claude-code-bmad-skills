@@ -54,7 +54,7 @@ This fork is an **experimental optimization** of the BMAD Skills for Claude Code
 
 | Feature | Description |
 |---------|-------------|
-| **Autonomous Sprint Execution** | `/accbmad:dev-story-auto` processes all pending stories automatically |
+| **Autonomous Sprint Execution** | `/accbmad:dev-sprint-auto` processes all pending stories automatically |
 | **Script-Driven Story Queue** | `story-queue.sh` manages story progression reliably |
 | **Mandatory Code Review** | Enforced adversarial review with `--auto-fix` mode |
 | **Double Review Pattern** | Verification review after commit catches context issues |
@@ -133,7 +133,7 @@ Design system architecture and validate against requirements.
 
 ### Phase 4: Implementation
 **Skills:** Scrum Master, Developer
-**Commands:** `/accbmad:sprint-planning`, `/accbmad:dev-story`, `/accbmad:dev-story-auto`
+**Commands:** `/accbmad:sprint-planning`, `/accbmad:dev-story`, `/accbmad:dev-sprint-auto`
 
 Plan sprints, create stories, and implement features.
 
@@ -141,14 +141,14 @@ Plan sprints, create stories, and implement features.
 
 ## Autonomous Development Mode
 
-Version 1.3.0 introduces **autonomous sprint execution** with `/accbmad:dev-story-auto`.
+Version 1.3.0 introduces **autonomous sprint execution** with `/accbmad:dev-sprint-auto`.
 
 ### What It Does
 
 Automatically processes **all pending stories** in your sprint:
 
 ```
-/accbmad:dev-story-auto
+/accbmad:dev-sprint-auto
     |
 +---------------------------------------------+
 |  For each pending story:                    |
@@ -179,16 +179,16 @@ Sprint complete!
 
 ```bash
 # Process all pending stories
-/accbmad:dev-story-auto
+/accbmad:dev-sprint-auto
 
 # Limit to specific number
-/accbmad:dev-story-auto --max 3
+/accbmad:dev-sprint-auto --max 3
 
 # Single story only
-/accbmad:dev-story-auto --story VS-002-S11
+/accbmad:dev-sprint-auto --story VS-002-S11
 
 # Preview only (dry run)
-/accbmad:dev-story-auto --dry-run
+/accbmad:dev-sprint-auto --dry-run
 ```
 
 ---
@@ -291,7 +291,7 @@ After installation, files are located at:
 |   +-- accbmad/
 |       +-- workflow-init.md
 |       +-- workflow-status.md
-|       +-- dev-story-auto.md
+|       +-- dev-sprint-auto.md
 |       +-- ... (34 workflow commands)
 +-- hooks/
 ```

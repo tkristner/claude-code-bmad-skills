@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.0] - 2026-02-04
 
 ### Added
-- **Autonomous Sprint Execution** (`/accbmad:dev-story-auto`)
+- **Autonomous Sprint Execution** (`/accbmad:dev-sprint-auto`)
   - Script-driven story queue with `story-queue.sh`
   - Processes all pending stories automatically
   - Mandatory code review with `--auto-fix` mode

@@ -117,7 +117,7 @@ BMAD adapts workflow complexity based on project size:
 | `/accbmad:architecture` | System design |
 | `/accbmad:sprint-planning` | Plan iterations |
 | `/accbmad:dev-story` | Implement a story |
-| `/accbmad:dev-story-auto` | Autonomous sprint execution |
+| `/accbmad:dev-sprint-auto` | Autonomous sprint execution |
 
 ### Project Structure
 
