@@ -289,11 +289,17 @@ After all phases complete:
 ```
 1. Send shutdown requests to all reviewers:
    For each reviewer:
-     SendMessage(type: "shutdown_request", recipient: "{lens}-reviewer")
+     SendMessage(
+       type: "shutdown_request",
+       recipient: "{lens}-reviewer",
+       content: "Review complete. All phases finished, consolidated report written. Shutting down team."
+     )
 
-2. Wait for confirmations
-3. Clean up temporary files in accbmad/tmp/review-* and accbmad/tmp/debate-*
-4. Update workflow status (helpers.md#Update-Workflow-Status)
+2. Wait for shutdown confirmations from all teammates
+3. Clean up team resources:
+   TeamDelete()
+4. Clean up temporary files in accbmad/tmp/review-* and accbmad/tmp/debate-*
+5. Update workflow status (helpers.md#Update-Workflow-Status)
 ```
 
 ## Step 9: Present Results

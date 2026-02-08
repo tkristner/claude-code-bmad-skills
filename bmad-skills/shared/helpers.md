@@ -214,12 +214,17 @@ Purpose: Gracefully shut down all teammates and clean up
 Steps:
 1. Read team config: ~/.claude/teams/{team-name}/config.json
 2. For each teammate in config.members:
-   - SendMessage(type: "shutdown_request", recipient: teammate.name)
-3. Wait for shutdown confirmations
-4. Optionally call TeamDelete to remove team resources
+   - SendMessage(
+       type: "shutdown_request",
+       recipient: teammate.name,
+       content: "All tasks complete. Shutting down team."
+     )
+3. Wait for shutdown confirmations from all teammates
+4. Call TeamDelete() to remove team and task directories
 5. Log team completion
 
 Note: Only shut down after all tasks are completed or explicitly cancelled.
+TeamDelete will fail if active teammates remain — shut them down first.
 ```
 
 ## Document Operations

@@ -149,6 +149,8 @@ This prefix is critical: BMAD hooks only activate for `bmad-*` teams.
 | `bmad-teammate-idle.sh` | TeammateIdle | Check for unclaimed tasks | 0=idle OK, 2=keep working |
 | `bmad-task-completed.sh` | TaskCompleted | Validate output quality + run tests | 0=allow, 2=reject |
 
+**How hooks work:** Both hooks receive event data as JSON on **stdin** (fields: `team_name`, `teammate_name`, `task_id`, `task_subject`, etc.). On exit code 2, **stderr** is sent back to the agent as feedback. Requires `jq` for JSON parsing.
+
 ### Helper Operations
 
 Team operations in `helpers.md`:

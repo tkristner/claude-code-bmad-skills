@@ -218,11 +218,17 @@ After all rounds complete:
 ```
 1. Send shutdown requests to all researchers:
    For each researcher:
-     SendMessage(type: "shutdown_request", recipient: "{dimension}-researcher")
+     SendMessage(
+       type: "shutdown_request",
+       recipient: "{dimension}-researcher",
+       content: "Research complete. All rounds finished, final report synthesized. Shutting down team."
+     )
 
-2. Wait for confirmations
-3. Clean up temporary files in accbmad/tmp/research-* and accbmad/tmp/challenge-* and accbmad/tmp/rebuttal-*
-4. Update workflow status (helpers.md#Update-Workflow-Status)
+2. Wait for shutdown confirmations from all teammates
+3. Clean up team resources:
+   TeamDelete()
+4. Clean up temporary files in accbmad/tmp/research-* and accbmad/tmp/challenge-* and accbmad/tmp/rebuttal-*
+5. Update workflow status (helpers.md#Update-Workflow-Status)
 ```
 
 ## Step 10: Present Results

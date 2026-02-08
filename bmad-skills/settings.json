@@ -1,40 +1,54 @@
 {
   "$schema": "https://claude.ai/schemas/claude-code-settings.json",
-  "description": "BMAD Skills Configuration for Claude Code",
   "hooks": {
     "SessionStart": [
       {
-        "type": "command",
-        "command": "bash $SKILL_DIR/hooks/bmad-session-start.sh",
-        "description": "Initialize BMAD environment variables and context"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME\"/.claude/skills/accbmad/hooks/bmad-session-start.sh"
+          }
+        ]
       }
     ],
     "PreToolUse": [
       {
-        "type": "command",
-        "command": "bash $SKILL_DIR/hooks/bmad-pre-tool.sh",
-        "description": "Validate and log BMAD tool usage"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME\"/.claude/skills/accbmad/hooks/bmad-pre-tool.sh"
+          }
+        ]
       }
     ],
     "PostToolUse": [
       {
-        "type": "command",
-        "command": "bash $SKILL_DIR/hooks/bmad-post-tool.sh",
-        "description": "Track BMAD workflow progress after tool execution"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME\"/.claude/skills/accbmad/hooks/bmad-post-tool.sh"
+          }
+        ]
       }
     ],
     "TeammateIdle": [
       {
-        "type": "command",
-        "command": "bash $SKILL_DIR/hooks/bmad-teammate-idle.sh",
-        "description": "Check for unclaimed BMAD tasks when teammate goes idle"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME\"/.claude/skills/accbmad/hooks/bmad-teammate-idle.sh"
+          }
+        ]
       }
     ],
     "TaskCompleted": [
       {
-        "type": "command",
-        "command": "bash $SKILL_DIR/hooks/bmad-task-completed.sh",
-        "description": "Validate output quality before marking BMAD task as done"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME\"/.claude/skills/accbmad/hooks/bmad-task-completed.sh"
+          }
+        ]
       }
     ]
   },
