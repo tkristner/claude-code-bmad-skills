@@ -113,6 +113,24 @@ All BMAD skills leverage **parallel subagents** to maximize the 200K token conte
 
 See `BMAD-SUBAGENT-PATTERNS.md` for detailed patterns.
 
+## Agent Teams
+
+When Claude Code's Agent Teams feature is available, existing commands **auto-upgrade** to multi-agent collaboration (inter-agent messaging, shared task lists, plan approval, quality hooks). No separate commands to learn — each command detects when teams add value and offers the upgrade:
+
+| Command | Team Mode Enhancement |
+|---------|----------------------|
+| `/dev-sprint-auto` | N parallel devs + reviewer + plan approval (wave-based) |
+| `/research` | 4 adversarial researchers with challenge/rebuttal rounds |
+| `/code-review` | 3 specialists (security/perf/testing) + severity debate |
+| `/architecture` | Research best patterns + parallel component design + cross-review |
+| `/create-epics-stories` | Parallel story writers + live FR coverage validator |
+
+**Shortcuts:** `/team-research`, `/team-implement`, `/team-review` force team mode on the underlying command.
+
+All team-capable commands gracefully degrade to subagent patterns if Agent Teams are unavailable.
+
+See `BMAD-AGENT-TEAMS.md` for the complete guide.
+
 ## Quick Commands
 
 When in a BMAD-initialized project, these workflows are available:
@@ -135,7 +153,8 @@ When in a BMAD-initialized project, these workflows are available:
 **Phase 4 - Implementation:**
 - `/sprint-planning` - Plan sprints from requirements
 - `/create-story` - Create detailed user story
-- `/dev-story STORY-ID` - Implement a story
+- `/dev-story STORY-ID` - Implement a single story
+- `/dev-sprint-auto` - Implement full sprint (auto-upgrades to team mode)
 
 **Status:**
 - `/workflow-status` or `/status` - Check project progress

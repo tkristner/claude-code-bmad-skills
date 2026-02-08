@@ -1,6 +1,6 @@
 ---
 name: bmad-orchestrator
-description: Orchestrates BMAD workflows for structured AI-driven development. Use when initializing BMAD in projects, checking workflow status, or routing between 4 phases (Analysis, Planning, Solutioning, Implementation). Manages project configs, tracks progress through project levels 0-4, and coordinates with specialized workflows. Generates project context for AI agents. Trigger on /workflow-init, /workflow-status, project context, generate context, AI rules, agent guidelines, or when users need BMAD setup.
+description: Orchestrates BMAD workflows for structured AI-driven development. Use when initializing BMAD in projects, checking workflow status, or routing between 4 phases (Analysis, Planning, Solutioning, Implementation). Manages project configs, tracks progress through project levels 0-4, and coordinates with specialized workflows. Generates project context for AI agents. Coordinates Agent Teams for multi-agent collaboration. Trigger on /workflow-init, /workflow-status, /team-research, /team-review, project context, generate context, AI rules, agent guidelines, team research, adversarial research, multi-lens review, collaborative review, or when users need BMAD setup.
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep, TodoWrite
 ---
 
@@ -211,6 +211,7 @@ After determining project status, route users to specialized workflows:
 - `/create-epics-stories` - Transform PRD into epics and stories
 - `/create-story` - Create individual user story
 - `/dev-story` - Implement user story
+- `/dev-sprint-auto` - Autonomous sprint implementation (auto-upgrades to team mode)
 - `/quick-dev` - Quick implementation with built-in review
 - `/code-review` - Adversarial code review (3-10 issues minimum)
 - `/qa-automate` - Auto-generate tests
@@ -219,6 +220,15 @@ After determining project status, route users to specialized workflows:
 - `/workflow-status` - Check progress and recommendations
 - `/workflow-init` - Initialize BMAD in project
 - `/validate-phase-transition` - Validate alignment between phases
+
+### Agent Teams (Multi-Agent Collaboration)
+- `/team-research` - Adversarial multi-perspective research with 4 researcher agents, 3 rounds (Research → Challenge → Rebuttal)
+- `/team-implement` - Parallel story implementation with plan approval, N dev agents + reviewer
+- `/team-review` - Multi-lens review (security, performance, testing) with debate phase
+
+**Team trigger keywords:** team research, adversarial research, multi-perspective, team implement, parallel stories, team review, multi-lens review, collaborative review
+
+See [BMAD-AGENT-TEAMS.md](../BMAD-AGENT-TEAMS.md) for when to use teams vs subagents.
 
 **Recommendation logic:**
 1. If no product-brief and project new → Recommend: `/product-brief`
@@ -476,5 +486,7 @@ For small, well-defined changes (Level 0-1, brownfield enhancements):
 - **Workflow selection guide**: [../shared/resources/workflow-selection-guide.md](../shared/resources/workflow-selection-guide.md)
 - Workflow phases: [resources/workflow-phases.md](resources/workflow-phases.md)
 - Config template: [templates/config.template.yaml](templates/config.template.yaml)
+- Team config template: [templates/team-config.template.json](templates/team-config.template.json)
+- **Agent Teams guide**: [../BMAD-AGENT-TEAMS.md](../BMAD-AGENT-TEAMS.md)
 - Init script: [scripts/init-project.sh](scripts/init-project.sh)
 - Status script: [scripts/check-status.sh](scripts/check-status.sh)

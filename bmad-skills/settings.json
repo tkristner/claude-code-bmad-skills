@@ -22,6 +22,20 @@
         "command": "bash $SKILL_DIR/hooks/bmad-post-tool.sh",
         "description": "Track BMAD workflow progress after tool execution"
       }
+    ],
+    "TeammateIdle": [
+      {
+        "type": "command",
+        "command": "bash $SKILL_DIR/hooks/bmad-teammate-idle.sh",
+        "description": "Check for unclaimed BMAD tasks when teammate goes idle"
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "type": "command",
+        "command": "bash $SKILL_DIR/hooks/bmad-task-completed.sh",
+        "description": "Validate output quality before marking BMAD task as done"
+      }
     ]
   },
   "skills": {

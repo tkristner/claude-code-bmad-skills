@@ -1,0 +1,122 @@
+{
+  "description": "BMAD Agent Team configuration template",
+  "team_name": "bmad-{{WORKFLOW}}-{{PROJECT_NAME}}",
+  "workflows": {
+    "team-research": {
+      "lead": {
+        "agent": "bmad-orchestrator",
+        "mode": "delegate",
+        "description": "Coordinates research, manages rounds, synthesizes findings"
+      },
+      "members": [
+        {
+          "name": "market-researcher",
+          "agent_type": "general-purpose",
+          "role": "Market and trends research specialist",
+          "mode": "default"
+        },
+        {
+          "name": "competitive-researcher",
+          "agent_type": "general-purpose",
+          "role": "Competitive landscape analysis specialist",
+          "mode": "default"
+        },
+        {
+          "name": "technical-researcher",
+          "agent_type": "general-purpose",
+          "role": "Technical feasibility and landscape specialist",
+          "mode": "default"
+        },
+        {
+          "name": "user-researcher",
+          "agent_type": "general-purpose",
+          "role": "User needs and adoption specialist",
+          "mode": "default"
+        }
+      ]
+    },
+    "team-implement": {
+      "lead": {
+        "agent": "scrum-master",
+        "mode": "delegate",
+        "description": "Coordinates implementation, approves plans, tracks sprint"
+      },
+      "members_template": {
+        "dev": {
+          "name_pattern": "dev-{STORY-ID}",
+          "agent_type": "general-purpose",
+          "role": "Story implementation developer",
+          "mode": "plan",
+          "count": "dynamic (1 per independent story)"
+        },
+        "reviewer": {
+          "name": "reviewer",
+          "agent_type": "general-purpose",
+          "role": "Code review specialist",
+          "mode": "default",
+          "count": 1
+        }
+      }
+    },
+    "team-review": {
+      "lead": {
+        "agent": "bmad-orchestrator",
+        "mode": "delegate",
+        "description": "Coordinates review phases, manages debate, synthesizes report"
+      },
+      "members": [
+        {
+          "name": "security-reviewer",
+          "agent_type": "general-purpose",
+          "role": "Security and compliance review specialist",
+          "mode": "default"
+        },
+        {
+          "name": "performance-reviewer",
+          "agent_type": "general-purpose",
+          "role": "Performance and scalability review specialist",
+          "mode": "default"
+        },
+        {
+          "name": "testing-reviewer",
+          "agent_type": "general-purpose",
+          "role": "Testing and quality review specialist",
+          "mode": "default"
+        }
+      ]
+    }
+  },
+  "naming_convention": {
+    "pattern": "bmad-{workflow}-{project_name}",
+    "examples": [
+      "bmad-research-myapp",
+      "bmad-implement-myapp",
+      "bmad-review-myapp"
+    ],
+    "note": "All BMAD teams must start with 'bmad-' prefix for hook filtering"
+  },
+  "hooks": {
+    "TeammateIdle": "bmad-teammate-idle.sh",
+    "TaskCompleted": "bmad-task-completed.sh"
+  },
+  "output_paths": {
+    "team-research": "accbmad/1-analysis/team-research-{topic}-{date}.md",
+    "team-implement": "accbmad/4-implementation/stories/ (individual story files updated)",
+    "team-review": "accbmad/3-solutioning/team-review-{date}.md"
+  },
+  "tmp_paths": {
+    "team-research": [
+      "accbmad/tmp/research-{dimension}.md",
+      "accbmad/tmp/challenge-{dimension}.md",
+      "accbmad/tmp/rebuttal-{dimension}.md"
+    ],
+    "team-implement": [
+      "accbmad/tmp/implementation-review.md",
+      "accbmad/tmp/sprint-implementation-summary.md"
+    ],
+    "team-review": [
+      "accbmad/tmp/review-{lens}.md",
+      "accbmad/tmp/debate-{lens}.md"
+    ]
+  }
+}

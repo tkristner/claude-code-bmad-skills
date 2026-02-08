@@ -234,7 +234,7 @@ What should I do with these findings?
 [D] Deep dive - Explain specific issues in detail
 ```
 
-**If `--auto-fix` flag was provided:** Skip the prompt and automatically proceed with Option A (Auto-fix all). This is used by autonomous workflows like `/dev-story-auto`.
+**If `--auto-fix` flag was provided:** Skip the prompt and automatically proceed with Option A (Auto-fix all). This is used by autonomous workflows like `/dev-sprint-auto`.
 
 ---
 
@@ -462,4 +462,4 @@ Stop the workflow and notify user if:
 - Fix all CRITICAL, HIGH, MEDIUM issues
 - Re-run tests after fixes
 - If fixes introduce new issues, fix those too (max 3 iterations)
-- This mode is used by `/dev-story-auto` for autonomous development
+- This mode is used by `/dev-sprint-auto` for autonomous development

@@ -1,6 +1,6 @@
 ---
 name: developer
-description: Implements user stories, writes clean tested code, follows best practices. Trigger keywords implement story, dev story, code, implement, build feature, fix bug, write tests, code review, refactor, quick dev, quick fix, implement directly, adversarial review, qa automate, generate tests, expedited fix, hotfix, urgent fix, production issue, dev story auto, auto dev, autonomous dev, sprint auto
+description: Implements user stories, writes clean tested code, follows best practices. Trigger keywords implement story, dev story, code, implement, build feature, fix bug, write tests, code review, refactor, quick dev, quick fix, implement directly, adversarial review, qa automate, generate tests, expedited fix, hotfix, urgent fix, production issue, dev sprint auto, dev story auto, auto dev, autonomous dev, sprint auto, team implement, parallel sprint
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep, TodoWrite
 ---
 
@@ -270,13 +270,13 @@ Choose the right workflow for the task:
 
 **Invoke:** `/expedited-fix` or `/hotfix`
 
-**Dev Story Auto Workflow:** See [workflows/dev-story-auto.md](workflows/dev-story-auto.md)
+**Dev Story Auto Workflow:** See [workflows/dev-sprint-auto.md](workflows/dev-sprint-auto.md)
 - Autonomous story implementation loop
 - Auto code review with automatic fixes (no user prompt)
 - Git branch per story, merge to develop
 - Continues until all stories done or HALT
 
-**Invoke:** `/dev-story-auto` or `/dev-story-auto --epic 2` or `/dev-story-auto --max 3`
+**Invoke:** `/dev-sprint-auto` or `/dev-sprint-auto --epic 2` or `/dev-sprint-auto --max 3`
 
 ---
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 ###############################################################################
-# Story Queue Manager for dev-story-auto
+# Story Queue Manager for dev-sprint-auto
 #
 # This script manages the story queue and forces Claude to continue processing
 # by always returning the next action to take.

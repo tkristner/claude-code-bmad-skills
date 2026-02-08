@@ -63,7 +63,7 @@ Commands are markdown files in `~/.claude/commands/accbmad/` that define interac
 | [/create-epics-stories](#create-epics-stories) | Transform PRD into epics and stories |
 | [/create-story](#create-story) | Create individual story |
 | [/dev-story](#dev-story) | Implement user story |
-| [/dev-story-auto](#dev-story-auto) | **Autonomous sprint execution** |
+| [/dev-sprint-auto](#dev-sprint-auto) | **Autonomous sprint execution** |
 | [/quick-dev](#quick-dev) | Quick implementation with built-in review |
 | [/code-review](#code-review) | Adversarial code review (3-10 issues min) |
 | [/qa-automate](#qa-automate) | Auto-generate tests |
@@ -1255,7 +1255,7 @@ See the [Developer skill documentation](../skills/#developer) for a complete imp
 
 ---
 
-<h3 id="dev-story-auto">/dev-story-auto</h3>
+<h3 id="dev-sprint-auto">/dev-sprint-auto</h3>
 
 Autonomous sprint execution - processes all pending stories automatically with integrated code review and git workflow.
 
@@ -1288,10 +1288,10 @@ The workflow uses a script-driven loop that processes each story through 8 manda
 
 | Option | Description | Example |
 |--------|-------------|---------|
-| (none) | All pending stories | `/dev-story-auto` |
-| `--story ID` | Single specific story | `/dev-story-auto --story 2-3` |
-| `--max N` | Maximum N stories | `/dev-story-auto --max 3` |
-| `--dry-run` | Show plan only | `/dev-story-auto --dry-run` |
+| (none) | All pending stories | `/dev-sprint-auto` |
+| `--story ID` | Single specific story | `/dev-sprint-auto --story 2-3` |
+| `--max N` | Maximum N stories | `/dev-sprint-auto --max 3` |
+| `--dry-run` | Show plan only | `/dev-sprint-auto --dry-run` |
 
 #### HALT Conditions
 
@@ -1303,7 +1303,7 @@ The workflow stops automatically when:
 #### Example Session
 
 ```
-User: /dev-story-auto
+User: /dev-sprint-auto
 
 Developer: Starting autonomous development...
 
