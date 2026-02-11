@@ -1,8 +1,7 @@
 # Another Claude-Code BMAD
 
-> **An optimized fork of aj-geddes's BMAD implementation for Claude Code**
 >
-> Experimental enhancements to the BMAD Method skills, with autonomous workflows, Agent Teams integration, enforced code reviews, and improved developer experience.
+> Experimental enhancements to the BMAD Method skills, with autonomous workflows, Agent Teams integration (Opus 4.6), enforced code reviews, and improved developer experience.
 
 [![Version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/tkristner/Another_Claude-Code_BMAD/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
@@ -81,6 +80,18 @@ This fork experiments with:
 
 - Claude Code installed and configured
 - Bash shell (Linux, macOS, or WSL on Windows)
+- Enable Agent Teams via the CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS environment variable, and set teammateMode to tmux, which uses tmux to manage multiple terminal panes for independent agent sessions.
+.claude/settings.json :
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "teammateMode": "tmux"
+}
+
+
+ 
+
 
 ### Quick Install
 
